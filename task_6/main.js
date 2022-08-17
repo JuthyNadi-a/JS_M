@@ -8,7 +8,7 @@ function daySalary() {
     } else if (workHour > 7 && workHour == 9) {
         console.log(totalSalary = parseFloat(salary + (salary * .50)));
     } else if (workHour > 9) {
-        console.log(totalSalary = parseFloat(salary + (salary * (100/100))));
+        console.log(totalSalary = parseFloat(salary + salary));
     }
 }
 daySalary();
