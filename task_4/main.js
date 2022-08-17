@@ -1,9 +1,6 @@
-/* let firstNumber = parseInt(document.getElementById("number1").value);
-let secondNumber = parseInt(document.getElementById("number2").value);
-let thirdNumber = parseInt(document.getElementById("number3").value); */
-let firstNumber = parseInt(prompt());
-let secondNumber = parseInt(prompt());
-let thirdNumber = parseInt(prompt());
+let firstNumber = parseInt(prompt("first number"));
+let secondNumber = parseInt(prompt("second number"));
+let thirdNumber = parseInt(prompt("third number"));
     
     function checkNumber(){
     let sum = firstNumber + secondNumber + thirdNumber;
