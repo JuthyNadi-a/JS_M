@@ -5,17 +5,17 @@
 //Evaluate the below:
 /* something! */ //
 3 + "65" >> 365 // concatenation
-7 - "3" >> 4 // number first
+7 - "3" >> 4 // number first, minus has only one function
 15 % 5 >> 0
-5 % 15 >> 5 // ?
+5 % 15 >> 5 // 15 cant divide 5, so computer gives the first no as the remainder.
 "Java" + "Script" >> JavaScript
 "Java" - "Script" >> NaN
 " " + " " >> '  '
 " " + 0 >> '0'
-true + true >> 2 // ? 
-true + false >> 1 // ?
-false + true >> 1 // ? 
-false - true >> -1 // ?
+true + true >> 2 // true has value 1, false has value 0 as binary
+true + false >> 1 // 
+false + true >> 1 // 
+false - true >> -1 // 
 3 - 4 >> -1
 
 
@@ -24,9 +24,9 @@ false - true >> -1 // ?
 6 === 2 >> false
 3 <= 1 >> false
 1 != 1 >> false
-"A" > "B" >> false // ?
-"B" < "C" >> true // ?
-"a" > "A" >> true // ?
+"A" > "B" >> false // 
+"B" < "C" >> true // 
+"a" > "A" >> true // alphabetic order, has binary values
 "b" < "A" >> false
 true === false >> false
 true != true >> false
