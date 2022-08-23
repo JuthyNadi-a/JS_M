@@ -1,6 +1,6 @@
 function daySalary() {
-    let hourlySalary = parseFloat(prompt());
-    let workHour = parseFloat(prompt());
+    let hourlySalary = parseFloat(prompt("what is the hourly salary?"));
+    let workHour = parseFloat(prompt("how many hours you worked?"));
     let totalSalary;
     let salary = parseFloat(workHour * hourlySalary);
     if (workHour == 7) {
