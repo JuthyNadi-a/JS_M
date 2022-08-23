@@ -98,9 +98,16 @@ console.log(average2); */
 
 /* Make a program that asks first how many numbers user wants to give to the program. After that program asks those numbers. In the end program prints out the smallest number that user gave. */
 
-function numbers (){
-    let counter;
+function numbers() {
     let num4;
-    let smallestNum;
-    counter = prompt("how many numbers user wants to give to the program?")
-}
+    let number5;
+    let counter = Number(prompt("how many numbers user wants to give to the program?"));
+    let smallestNum = 0;
+    for (num4=0; num4 <= counter; num4++){
+        number5 = prompt("Next number");
+        if (num4 <= smallestNum){
+            console.log("the smallest num is " + num4);
+        }
+    }
+};
+numbers();
