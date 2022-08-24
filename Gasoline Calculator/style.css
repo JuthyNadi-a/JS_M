@@ -1,5 +1,15 @@
-#price, #amount {
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
     margin: 15px;
+}
+input, button {
+    font-family: inherit;
+}
+label {
+    display: inline-block;
+    width: 100px;
+    margin: 10px 0;
 }
 .calculator {
     border: 2px 2px 2px solid rgb(181, 206, 154);
