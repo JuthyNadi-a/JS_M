@@ -1,0 +1,30 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: linear-gradient(to bottom, #c0d8e0, #f0f3c5);
+    margin: 20px;
+}
+.info {
+    font-size: 18px;
+    text-align: justify;
+}
+/* .pizzaPic {
+    display: float;
+    align-items: center;
+    align-content: center;
+} */
+.pizzaPic img {
+    width: 550px;
+    height: 350px;
+}
+button {
+    background-color: darkgreen;
+    font-size: 18px;
+    border-radius: 6px;
+    width: 120px;
+    height: 50px;
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+    color: rgb(236, 245, 236);
+}
