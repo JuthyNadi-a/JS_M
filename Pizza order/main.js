@@ -1,42 +1,40 @@
-const pizzaOrder = (id, price) => {
-    let toppingPrice;
-    let deliveryPrice;
-    let totalPrice = price + toppingPrice + deliveryPrice;
+let price = 0;
+let toppingPrice = 0;
+let deliveryPrice = 0;
+let totalPrice = price + toppingPrice + deliveryPrice;
+const pizzaOrder = (id) => {
     const pizzaSize = () => {
         if (id == "for2") {
             price = 7.5;
-            console.log(price);
-            console.log(totalPrice);
-            return totalPrice;
         } else if (id == "for4") {
             price = 10.5;
-            console.log(price);
-            return totalPrice;
         } else if (id == "for6") {
             price = 12.5;
-            console.log(price);
-            return totalPrice;
         } else if (id == "for8") {
             price = 15.5;
-            console.log(price);
-            return totalPrice;
         }
     }
     pizzaSize();
-    /* Pizza topping part */
-     document.getElementById('select').onclick = function() {
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked.length');
-        console.log(checkboxes.length);
-    } 
-   
-    /* Pizza delivery options */
-   /*  const pizzaDelivery = () => {
-
-    }
-    pizzaDelivery(); */
-
-    totalPrice = parseFloat(price + toppingPrice + deliveryPrice);
-    final.textContent = `total price is ${totalPrice} €`;
-    /* console.log(totalPrice); */
+    console.log(price + toppingPrice);
+    console.log(totalPrice);
 }
 pizzaOrder();
+
+/* Pizza topping part */
+
+const pizzaTopping = () => {
+    const toppings = document.querySelectorAll('input[type="checkbox"]:checked').length;
+    if (toppings > 4 && toppings <= 10) {
+        toppingPrice += 0.5;
+    }
+    console.log(`price is ${toppingPrice}`);
+} 
+
+/* Pizza delivery options */
+const pizzaDelivery = () => {
+    let deliveryOption = document.querySelector("home")
+    if (deliveryOption = "home") {
+        deliveryPrice = 5 ;
+    }     
+    console.log(deliveryPrice);
+}

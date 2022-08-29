@@ -13,13 +13,13 @@
         <h2>Pizza Sizes</h2>
         <form>
             <input type="radio" name="pizzaSize" id="for2" value="For 2"
-            onclick="pizzaOrder(this.id, this.value)">
+            onclick="pizzaOrder(this.id)">
             <label for="">For 2</label><br>
-            <input type="radio" name="pizzaSize" id="for4" value="For 4" onclick="pizzaOrder(this.id, this.value)">
+            <input type="radio" name="pizzaSize" id="for4" value="For 4" onclick="pizzaOrder(this.id)">
             <label for="">For 4</label><br>
-            <input type="radio" name="pizzaSize" id="for6" value="For 6" onclick="pizzaOrder(this.id, this.value)">
+            <input type="radio" name="pizzaSize" id="for6" value="For 6" onclick="pizzaOrder(this.id)">
             <label for="">For 6</label><br>
-            <input type="radio" name="pizzaSize" id="for8" value="For 8" onclick="pizzaOrder(this.id, this.value)">
+            <input type="radio" name="pizzaSize" id="for8" value="For 8" onclick="pizzaOrder(this.id)">
             <label for="">For 8</label><br>
         </form>
     </div>
@@ -28,27 +28,27 @@
     <div class="pizzaTopping">
         <h2>Pizza Toppings</h2>
         <form>
-            <input type="checkbox" name="topping" id="topping1" value="topping1" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping1" value="topping1" oninput="pizzaTopping()">
             <label for="topping1"> Pickles</label><br>
-            <input type="checkbox" name="topping" id="topping2" value="topping2" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping2" value="topping2" oninput="pizzaTopping()">
             <label for="topping2"> Bacon</label><br>
-            <input type="checkbox" name="topping" id="topping3" value="topping3" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping3" value="topping3" oninput="pizzaTopping()">
             <label for="topping3"> Dried onion</label><br>
-            <input type="checkbox" name="topping" id="topping4" value="topping4" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping4" value="topping4" oninput="pizzaTopping()">
             <label for="topping4"> Olive</label><br>
-            <input type="checkbox" name="topping" id="topping5" value="topping5" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping5" value="topping5" oninput="pizzaTopping()">
             <label for="topping5"> Mushroom</label><br>
             <input type="checkbox" name="topping" id="topping6" value="topping6">
             <label for="topping6"> Salad</label><br>
-            <input type="checkbox" name="topping" id="topping7" value="topping7" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping7" value="topping7" oninput="pizzaTopping()">
             <label for="topping7"> Jalapeno</label><br>
-            <input type="checkbox" name="topping" id="topping8" value="topping8" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping8" value="topping8" oninput="pizzaTopping()">
             <label for="topping8"> Onions</label><br>
-            <input type="checkbox" name="topping" id="topping9" value="topping9" onclick="pizzaTopping(this.id, this.value)">
+            <input type="checkbox" name="topping" id="topping9" value="topping9" oninput="pizzaTopping()">
             <label for="topping9"> Salami</label><br>
-            <input type="checkbox" name="topping" id="topping10" value="topping10" onclick="pizzaTopping(this.id, this.value)">
-            <label for="topping10"> Parsa</label><br>
-            <button id="select">Select Toppings</button>
+            <input type="checkbox" name="topping" id="topping10" value="topping10" oninput="pizzaTopping()">
+            <label for="topping10"> Peperoni</label><br>
+            
         </form>
     </div>
 
@@ -58,9 +58,9 @@
         <label for="delivery">Choose a delivery option:</label><br>
 
         <select name="delivery" id="delivery">
-            <option value="home">Home</option>
-            <option value="eatIn">Eat in</option>
-            <option value="takeAway">Take Away</option>
+            <option value="home" oninput="pizzaDelivery()">Home</option>
+            <option value="eatIn" oninput="pizzaDelivery()">Eat in</option>
+            <option value="takeAway" oninput="pizzaDelivery()">Take Away</option>
         </select>
     </div>
 
@@ -68,6 +68,7 @@
     <div class="finalOrder">
         <p id="final"></p>
     </div>
+    <button class="btn"> Place order</button>
     <script src="main.js"></script>
 </body>
 </html>

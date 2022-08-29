@@ -56,3 +56,7 @@
         }
     }
     pizzaTopping;
+
+    totalPrice = parseFloat(price + toppingPrice + deliveryPrice);
+    final.textContent = `total price is ${totalPrice} €`;
+    /* console.log(totalPrice); */
