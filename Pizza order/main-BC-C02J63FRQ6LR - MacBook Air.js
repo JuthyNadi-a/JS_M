@@ -23,18 +23,22 @@ const pizzaOrder = (id, price) => {
         }
     }
     pizzaSize();
-    /* Pizza topping part */
-     document.getElementById('select').onclick = function() {
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked.length');
-        console.log(checkboxes.length);
-    } 
-   
-    /* Pizza delivery options */
-   /*  const pizzaDelivery = () => {
-
+    document.getElementById('select').onclick = function() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        if(checkboxes.length == 4) {
+            toppingPrice = 0;
+            totalPrice = price + toppingPrice+ deliveryPrice;
+            console.log(checkboxes.length);
+            console.log(totalPrice);
+            return totalPrice;
+        } else if (checkboxes.length > 4) {
+            checkboxes++;
+            toppingPrice += 0.5;
+            totalPrice = price + toppingPrice+ deliveryPrice;  
+            return totalPrice;
+        }
     }
-    pizzaDelivery(); */
-
+    
     totalPrice = parseFloat(price + toppingPrice + deliveryPrice);
     final.textContent = `total price is ${totalPrice} €`;
     /* console.log(totalPrice); */
