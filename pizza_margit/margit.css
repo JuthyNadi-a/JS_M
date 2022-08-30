@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 18px;
+}
+body {
+    font-family: 'Pacifico', cursive;
+}
+h1 {
+    margin: 0 0 1rem;
+}
+h2{
+    font-size: 1.2rem;
+    margin: 1rem 0 0;
+}
+p {
+    color: grey;
+    margin: 0 0 1rem;
+}
+
+input, select, button {
+    font-family: inherit;
+    margin: 1rem 0;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+button {
+    color: aliceblue;
+    background-color: orange;
+    border: none;
+    padding: 1rem 2rem;
+}
+button:hover {
+    color: aliceblue;
+    background-color: rgba(224, 126, 6, 0.926);
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+}
+.hero-image {
+    background: url('https://thumbs.dreamstime.com/b/pizza-slice-16344242.jpg') no-repeat fixed center right/cover;
+    width: 50vw;
+}
+.content{
+    width: 50vw;
+    padding: 2rem;
+}
+#order {
+    width: 20vw;
+}

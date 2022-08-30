@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Pizza order</title>
 </head>
 <body>
+    <h1>Welcome to Finlandia Pizza World!</h1>
+<div class="image">
+    <p></p>
+</div>
     <!-- Pizza size -->
-
+<div class="pizzaPart">
     <div class="pizzaSize">
-        <h2>Pizza Sizes</h2>
         <form>
+            <h2>Tell us your name:</h2>
+            <input type="text" placeholder="Enter your name" id="name">
+            <h2>Pizza Sizes</h2>
             <input type="radio" name="pizzaSize" id="for2" value="For 2"
             onclick="pizzaOrder(this.id, this.value)">
             <label for="">For 2, 7.5€</label><br>
@@ -55,11 +64,11 @@
 
     <!-- Pizza delivery -->
     <div class="pizzaDelivery">
-        <h2>Delivery Options</h2>
-        <label for="delivery">Choose a delivery option:</label><br>
+       
+        <label for="delivery"><h3>Choose a delivery option:</h3></label>
 
         <select name="delivery" id="select">
-            <option value="home" oninput="pizzaDelivery(this.value)">Home</option>
+            <option value="home" oninput="pizzaDelivery(this.value)">Home, +5€</option>
             <option value="eatIn" oninput="pizzaDelivery(this.value)">Eat in</option>
             <option value="takeAway" oninput="pizzaDelivery(this.value)">Take Away</option>
         </select>
@@ -70,10 +79,8 @@
         <p id="final"></p>
     </div>
     <button id="btnOrder"> Place order</button>
+</div>
 
-<!-- <div>
-    img
-</div> -->
     <script src="main.js"></script>
 </body>
 </html>
