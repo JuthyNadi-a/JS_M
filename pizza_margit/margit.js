@@ -59,10 +59,10 @@ const takeOrder = (event) => {
         price += 5;
     }
 
-    order.textContent = `Nmae: ${customerName}. Size was ${sizeResult},toppings: ${toppingResult.join(', ')}, delivery option is ${deliveryResult}, total price is : ${price} €.`
+    order.textContent = `Name: ${customerName}. Size was ${sizeResult},toppings: ${toppingResult.join(', ')}, delivery option is ${deliveryResult}, total price is : ${price} €.`
 
 
-
+    order.style ['box-shadow'] = '0 0 1 grey'
     console.log(customerName);
     console.log(sizeResult);
     console.log(toppingResult);
