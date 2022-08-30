@@ -68,6 +68,8 @@ const takeOrder = (event) => {
     console.log(toppingResult);
     console.log(deliveryResult);
     console.log(price);
+
+    form.reset();
 };
 
 form.addEventListener('submit', takeOrder);
