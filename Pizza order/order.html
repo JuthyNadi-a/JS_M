@@ -9,18 +9,19 @@
 </head>
 <body>
     <!-- Pizza size -->
+
     <div class="pizzaSize">
         <h2>Pizza Sizes</h2>
         <form>
             <input type="radio" name="pizzaSize" id="for2" value="For 2"
-            onclick="pizzaOrder(this.id)">
-            <label for="">For 2</label><br>
-            <input type="radio" name="pizzaSize" id="for4" value="For 4" onclick="pizzaOrder(this.id)">
-            <label for="">For 4</label><br>
-            <input type="radio" name="pizzaSize" id="for6" value="For 6" onclick="pizzaOrder(this.id)">
-            <label for="">For 6</label><br>
-            <input type="radio" name="pizzaSize" id="for8" value="For 8" onclick="pizzaOrder(this.id)">
-            <label for="">For 8</label><br>
+            onclick="pizzaOrder(this.id, this.value)">
+            <label for="">For 2, 7.5€</label><br>
+            <input type="radio" name="pizzaSize" id="for4" value="For 4" onclick="pizzaOrder(this.id, this.value)">
+            <label for="">For 4, 10.5€</label><br>
+            <input type="radio" name="pizzaSize" id="for6" value="For 6" onclick="pizzaOrder(this.id, this.value)">
+            <label for="">For 6, 12.5€</label><br>
+            <input type="radio" name="pizzaSize" id="for8" value="For 8" onclick="pizzaOrder(this.id, this.value)">
+            <label for="">For 8, 15.5€</label><br>
         </form>
     </div>
 
@@ -28,25 +29,25 @@
     <div class="pizzaTopping">
         <h2>Pizza Toppings</h2>
         <form>
-            <input type="checkbox" name="topping" id="topping1" value="topping1" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping1" value="Pickles" oninput="pizzaTopping(this.value)">
             <label for="topping1"> Pickles</label><br>
-            <input type="checkbox" name="topping" id="topping2" value="topping2" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping2" value="Bacon" oninput="pizzaTopping(this.value)">
             <label for="topping2"> Bacon</label><br>
-            <input type="checkbox" name="topping" id="topping3" value="topping3" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping3" value="Dried onion" oninput="pizzaTopping(this.value)">
             <label for="topping3"> Dried onion</label><br>
-            <input type="checkbox" name="topping" id="topping4" value="topping4" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping4" value="Olive" oninput="pizzaTopping(this.value)">
             <label for="topping4"> Olive</label><br>
-            <input type="checkbox" name="topping" id="topping5" value="topping5" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping5" value="Mushroom" oninput="pizzaTopping(this.value)">
             <label for="topping5"> Mushroom</label><br>
-            <input type="checkbox" name="topping" id="topping6" value="topping6">
+            <input type="checkbox" name="topping" id="topping6" value="Salad">
             <label for="topping6"> Salad</label><br>
-            <input type="checkbox" name="topping" id="topping7" value="topping7" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping7" value="Jalapeno" oninput="pizzaTopping(this.value)">
             <label for="topping7"> Jalapeno</label><br>
-            <input type="checkbox" name="topping" id="topping8" value="topping8" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping8" value="Onions" oninput="pizzaTopping(this.value)">
             <label for="topping8"> Onions</label><br>
-            <input type="checkbox" name="topping" id="topping9" value="topping9" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping9" value="Salami" oninput="pizzaTopping(this.value)">
             <label for="topping9"> Salami</label><br>
-            <input type="checkbox" name="topping" id="topping10" value="topping10" oninput="pizzaTopping()">
+            <input type="checkbox" name="topping" id="topping10" value="Peperoni" oninput="pizzaTopping(this.value)">
             <label for="topping10"> Peperoni</label><br>
             
         </form>
@@ -57,10 +58,10 @@
         <h2>Delivery Options</h2>
         <label for="delivery">Choose a delivery option:</label><br>
 
-        <select name="delivery" id="delivery">
-            <option value="home" oninput="pizzaDelivery()">Home</option>
-            <option value="eatIn" oninput="pizzaDelivery()">Eat in</option>
-            <option value="takeAway" oninput="pizzaDelivery()">Take Away</option>
+        <select name="delivery" id="select">
+            <option value="home" oninput="pizzaDelivery(this.value)">Home</option>
+            <option value="eatIn" oninput="pizzaDelivery(this.value)">Eat in</option>
+            <option value="takeAway" oninput="pizzaDelivery(this.value)">Take Away</option>
         </select>
     </div>
 
@@ -68,7 +69,11 @@
     <div class="finalOrder">
         <p id="final"></p>
     </div>
-    <button class="btn"> Place order</button>
+    <button id="btnOrder"> Place order</button>
+
+<!-- <div>
+    img
+</div> -->
     <script src="main.js"></script>
 </body>
 </html>

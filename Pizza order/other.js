@@ -60,3 +60,8 @@
     totalPrice = parseFloat(price + toppingPrice + deliveryPrice);
     final.textContent = `total price is ${totalPrice} €`;
     /* console.log(totalPrice); */
+
+     /* if (deliveryOption = "home") {
+        deliveryPrice = 5 ;
+    }     
+    console.log(deliveryPrice); */
