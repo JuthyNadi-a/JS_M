@@ -8,7 +8,8 @@
 body{
     font-family: 'Mukta', sans-serif;
     
-    background-color: rgb(179, 191, 195);
+    background-image: linear-gradient(rgb(252, 248, 248), rgb(144, 163, 179));
+    
 }
 .main {
     margin: 30px;
@@ -33,6 +34,7 @@ input, button {
     margin: 1.2rem 0;
     font-size: 1rem;
     padding: 0.5rem;
+    font-weight: 700;
 }
 input{
     font-size: 1rem;
@@ -49,7 +51,7 @@ button {
   }
   button:hover {
     color: white;
-    background: rgb(15, 41, 120);
+    background: rgb(40, 53, 91);
     border: none;
     padding: 1rem 2rem;
     cursor: pointer;
