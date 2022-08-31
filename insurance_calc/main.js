@@ -58,17 +58,20 @@ const getInsurance = (event) => {
             userHabits.push(item.value);
         }
     });
-    if (item.value = 'Daily exercise'){
-        habitInsurance = initialInsurance - (initialInsurance * 0.5);
+    userHabits.forEach((item) => {
+        if (item == 'Daily exercise'){
+        habitInsurance = 500 - (500 * 0.5);
     } else {
-        habitInsurance = initialInsurance + (initialInsurance * 0.5);
+        habitInsurance = 500 + (500 * 0.5);
     }
-    console.log(item.value)
+    console.log(item);
+    });
+    
     
 /* if (userHabits.length = 0){
     habitInsurance = 0;
 } else if (userHabits.length = 4) {
-    habitInsurance =  initialInsurance + (initialInsurance * 1.5);
+    habitInsurance =  500 + (initialInsurance * 1.5);
 } else if (userHabits.length = 3) {
     habitInsurance =  initialInsurance + (initialInsurance * 1);
 } else if (userHabits.length = 2) {
