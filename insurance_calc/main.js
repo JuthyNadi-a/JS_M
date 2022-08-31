@@ -58,12 +58,13 @@ const getInsurance = (event) => {
             userHabits.push(item.value);
         }
     });
-    
     if (item.value = 'Daily exercise'){
         habitInsurance = initialInsurance - (initialInsurance * 0.5);
     } else {
         habitInsurance = initialInsurance + (initialInsurance * 0.5);
     }
+    console.log(item.value)
+    
 /* if (userHabits.length = 0){
     habitInsurance = 0;
 } else if (userHabits.length = 4) {
