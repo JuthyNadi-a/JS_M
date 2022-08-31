@@ -4,38 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     <title>Insurance calculator</title>
 </head>
 <body>
 
 <form>
-    <h1>Insurance Calc</h1>
-    <h2>Your name please</h2>
-    <input type="text" placeholder="Enter your name" id="name">
-    <h2>Enter your age:</h2>
-    <input type="number" placeholder="Enter age" id="age">
-    <div>
-        <h2>Health conditions:</h2>
-        <input type="checkbox" name="health" id="condition1" value="Hypertension">
-        <label for="condition1">Hypertension</label>
-        <input type="checkbox" name="health" id="condition2" value="Blood sugar">
-        <label for="condition2">Blood sugar</label>
-        <input type="checkbox" name="health" id="condition3" value="Overweight">
-        <label for="condition3">Overweight</label>
+    <div class="hero-banner">
     </div>
-    <div>
-        <h2>Your regular habits</h2>
-        <input type="checkbox" name="habit" id="habit1" value="Daily exercise">
-        <label for="habit1">Daily exercise</label>
-        <input type="checkbox" name="habit" id="habit2" value="Smoking">
-        <label for="habit2">Smoking</label>
-        <input type="checkbox" name="habit" id="habit3" value="Alcohol">
-        <label for="habit3">Alcohol</label>
-        <input type="checkbox" name="habit" id="habit4" value="Drugs">
-        <label for="habit4">Drugs</label>
+    <div class="main">
+        <div>
+            <h1>Insurance and employee benefits solution</h1>
+            <h2>Your name please</h2>
+            <input type="text" placeholder="Enter your name" id="name">
+            <h2>Enter your age:</h2>
+            <input type="number" placeholder="Enter age" id="age">
+            <!-- health condition part -->
+            <h2>Health conditions:</h2>
+            <div>
+                <input type="checkbox" name="health" id="condition1" value="Hypertension">
+            <label for="condition1">Hypertension</label>
+            </div>
+            <div>
+                <input type="checkbox" name="health" id="condition2" value="Blood sugar">
+                <label for="condition2">Blood sugar</label>
+            </div>
+            <div>
+                <input type="checkbox" name="health" id="condition3" value="Overweight">
+                <label for="condition3">Overweight</label>
+            </div>
+        </div>
+        <!-- habits part -->
+        <div>
+            <h2>Your regular habits</h2>
+            <div>
+                <input type="checkbox" name="habit" id="habit1" value="Daily exercise">
+                <label for="habit1">Daily exercise</label>
+            </div>
+            <div>
+            <input type="checkbox" name="habit" id="habit2" value="Smoking">
+            <label for="habit2">Smoking</label>
+            </div>
+            <div>
+                <input type="checkbox" name="habit" id="habit3" value="Alcohol">
+            <label for="habit3">Alcohol</label>
+            </div>
+            <div>
+            <input type="checkbox" name="habit" id="habit4" value="Drugs">
+            <label for="habit4">Drugs</label>
+            </div>
+        </div><br>
+        <button type="submit">Calculate</button>
     </div>
-    <button type="submit">Calculate</button>
 </form>
 
     <p id="result"></p>
