@@ -77,7 +77,7 @@ const getInsurance = (event) => {
     result.innerHTML = `Hi, <span>${userName}!</span> Your risk score is: <span>${Math.ceil(riskScore)} €</span>.`;
     console.log(`Hi, <span>${userName}!</span> Your risk score is: <span>${riskScore.toFixed(0)} €</span>.`);
     
-    /* form.reset(); */
+    form.reset();
 }
 
 form.addEventListener('submit', getInsurance);
