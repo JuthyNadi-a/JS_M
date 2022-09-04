@@ -4,10 +4,9 @@ const age = document.querySelector('#age');
 const health = document.querySelectorAll('[name="health"]');
 const habit = document.querySelectorAll('[name="habit"]');
 
-let initialInsurance = 0;
 let healthInsurance = 500;
 let habitInsurance = 0;
-let totalInsurance = 0;
+let riskScore = 0;
 
 const getInsurance = (event) => {
     event.preventDefault();
@@ -16,24 +15,24 @@ const getInsurance = (event) => {
     let healthCondition = [];
     let userHabits = [];
 
-        /* Age portion */
+        /* Age section */
     if (userAge >= 66 && userAge <= 75) {
-        initialInsurance = 500 + (500 * 2.1)
+        healthInsurance = healthInsurance + (healthInsurance * 2.1)
     } else if (userAge >= 56 && userAge <= 65) {
-        initialInsurance = 500 + (500 * 1.5)
+        healthInsurance = healthInsurance + (healthInsurance * 1.5)
     } else if (userAge >= 46 && userAge <= 55) {
-        initialInsurance = 500 +(500 * 1)
+        healthInsurance = healthInsurance +(healthInsurance * 1)
     } else if (userAge >= 36 && userAge <= 45) {
-        initialInsurance = 500 +(500 * .6)
+        healthInsurance = healthInsurance +(healthInsurance * .6)
     } else if (userAge >= 26 && userAge <= 35) {
-        initialInsurance = 500 +(500 * .3)
+        healthInsurance = healthInsurance +(healthInsurance * .3)
     } else if (userAge > 18 && userAge <= 25) {
-        initialInsurance = 500 + (500 * .1)
+        healthInsurance = healthInsurance + (healthInsurance * .1)
     } else if (userAge == 18) {
-            initialInsurance = 500;
+            healthInsurance;
         }
         
-    /* Health condition portion */
+    /* Health condition section */
 
     health.forEach((item) => {
         if (item.checked){
@@ -42,18 +41,18 @@ const getInsurance = (event) => {
     });
 
     if (healthCondition.length == 1) {
-        healthInsurance = healthInsurance + (healthInsurance * 0.1);
+        habitInsurance = (healthInsurance * 0.01);
     }
     else if (healthCondition.length == 2) {
-        healthInsurance = healthInsurance + (healthInsurance * 0.2);
+        habitInsurance = (healthInsurance * 0.02);
     }
     else if (healthCondition.length == 3) {
-        healthInsurance = healthInsurance + (healthInsurance * 0.3);
+        habitInsurance = (healthInsurance * 0.03);
     } else {
-        healthInsurance = 0;
+        habitInsurance = 0;
     }
 
-        /* Habit portion */
+        /* Regular Habit section */
 
     habit.forEach((item) => {
         if (item.checked){
@@ -62,23 +61,23 @@ const getInsurance = (event) => {
     });
     userHabits.forEach((item) => {
         if (item == 'Daily exercise'){
-        habitInsurance = healthInsurance - (healthInsurance * 0.05);
+        healthInsurance = healthInsurance - (healthInsurance * 0.05);
+        } else if (item == 'Smoking' || 'Alcohol' || 'Drugs') {
+        healthInsurance = healthInsurance + (healthInsurance * 0.05);
         } else {
-        habitInsurance = healthInsurance + (healthInsurance * 0.05);
+            healthInsurance = 0;
         }
     });
     
 
      /* display final part */
 
-    totalInsurance = habitInsurance;
+    riskScore = habitInsurance + healthInsurance;
     
-    result.innerHTML = `Hi, <span>${userName}!</span> Your age is: <span>${userAge}</span>. Your health condition is: <span>${healthCondition.join(
-        ', '
-      )}</span>. Your regular habit is: <span>${userHabits.join(
-        ', ')}</span>. Your total insurance: <span>${totalInsurance.toFixed(0)} €</span>.`;
+    result.innerHTML = `Hi, <span>${userName}!</span> Your risk score is: <span>${Math.ceil(riskScore)} €</span>.`;
+    console.log(`Hi, <span>${userName}!</span> Your risk score is: <span>${riskScore.toFixed(0)} €</span>.`);
     
-    form.reset();
+    /* form.reset(); */
 }
 
 form.addEventListener('submit', getInsurance);

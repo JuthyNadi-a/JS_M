@@ -59,13 +59,14 @@ button {
     padding: 1rem 2rem;
     cursor: pointer;
   }
-  .span {
-    color: rgb(239, 236, 234);
+  span {
+    font-size: 26px;
+    color: rgb(9, 5, 102);
   }
   p {
-    background-color: rgb(87, 87, 87);
+    background-color: rgb(136, 135, 135);
     color: rgb(227, 231, 247);
-    margin: 0 0 1rem;
+    margin: 1rem 1rem 1rem;
     padding: 2rem 2rem;
     font-size: 24px;
   }
