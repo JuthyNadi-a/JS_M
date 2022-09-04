@@ -1,8 +1,9 @@
 body{
     font-family: 'Pacifico', cursive;
-    background: linear-gradient(to bottom, #c0d8e0, #f0f3c5);
-    margin: 20px;
+    color: rgb(212, 215, 219);
+    margin: 30px;
     font-size: 20px;
+    background: url(https://cdn.pixabay.com/photo/2020/03/21/02/26/pizza-4952509_1280.jpg) no-repeat center center/cover;
 }
 h1{
     text-align: center;
@@ -11,17 +12,21 @@ h1{
     font-size: 18px;
     text-align: justify;
 }
-/* .pizzaPic {
-    display: float;
-    align-items: center;
-    align-content: center;
-} */
+input::selection, select::selection{
+    background-color: rgb(189, 78, 5);
+    color: rgb(165, 80, 18);
+}
 .pizzaPic img {
     width: 550px;
     height: 350px;
 }
+
+#select {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
 button {
-    background-color: darkgreen;
+    background-color: rgb(244, 136, 53);
     color: aliceblue;
     font-size: 18px;
     border-radius: 6px;
@@ -30,15 +35,16 @@ button {
     margin-top: 20px;
     font-family: 'Pacifico', cursive;
 }
-a {
-    text-decoration: none;
-    color: rgb(236, 245, 236);
+button:hover {
+    background-color: rgb(187, 85, 3);
 }
-#select {
-    font-family: 'Pacifico', cursive;
-    font-size: 20px;
+p {
+    margin: 1rem 1rem 1rem 1rem;
+    font-size: 1.8rem;
+    height: 100px;
+    width: 1200px;
+    color: rgb(202, 115, 15);
 }
-
-/* .image {
-    background-image: ;
-} */
+span {
+    color: rgb(203, 206, 209);
+}

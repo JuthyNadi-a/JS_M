@@ -1,75 +1,65 @@
-const form = document.querySelector("form");
-
-const customer = document.querySelector("#name");
-/* console.log(customer); */
-/* querySelectorAll takes all the element and acts as a nodelist and simple array */
-const size = document.querySelectorAll('[name:"pizzaSize"]');
-console.log(size);
-
-const toppings = document.querySelectorAll('input[type="checkbox]');
-console.log(toppings);
-
+const form = document.querySelector('form');
+const customer = document.querySelector('#name');
+const size = document.querySelectorAll('[name="size"]');
+const toppings = document.querySelectorAll('input[type="checkbox"]');
 const delivery = document.querySelector('#delivery');
-
 const order = document.querySelector('#order');
+
 const takeOrder = (event) => {
-    /* to remove default time when shown in console and that it stays */
-    event.preventDefault();
-    /* console.log("order taken"); */
+  let customerName = customer.value;
+  let sizeResult = '';
+  let toppingsResult = [];
+  let deliveryResult = delivery.options[delivery.selectedIndex].value;
+  let price = 0;
 
-    let customerName = customer.value;
-    let sizeResult = "";
-    let toppingResult = [];
-    let deliveryResult = delivery.options[delivery.selectedIndex].value;
-    let price = 0;
-
-    size.foreach((item) => {
-        if (item.checked) {
-            sizeResult = item.value;
-        }
-    });
-    switch (sizeResult) {
-        case 'for2':
-            price += 7.5;
-            break;
-        case 'for4':
-            price += 10.5;
-            break;
-        case 'for6':
-            price += 12.5;
-            break;
-        case 'for8':
-            price += 15.5;
-            break;
-        default:
+  size.forEach((item) => {
+    if (item.checked) {
+      sizeResult = item.value;
     }
+  });
 
+  switch (sizeResult) {
+    case 'two':
+      price += 7.5;
+      break;
+    case 'four':
+      price += 10.5;
+      break;
+    case 'six':
+      price += 12.5;
+      break;
+    case 'eight':
+      price += 15.5;
+      break;
+    default:
+  }
 
-    toppings.forEach((item) => {
-        if (item.checked) {
-            toppingResult = item.value;
-        }
-    });
-    
-    if (toppingResult.length > 4) {
-        price += (toppingResult.length-4) * 0.5;
+  toppings.forEach((item) => {
+    if (item.checked) {
+      toppingsResult.push(item.value);
     }
+  });
 
-    if (deliveryResult = "home") {
-        price += 5;
-    }
+  if (toppingsResult.length > 4) {
+    price += (toppingsResult.length - 4) * 0.5;
+  }
 
-    order.textContent = `Name: ${customerName}. Size was ${sizeResult},toppings: ${toppingResult.join(', ')}, delivery option is ${deliveryResult}, total price is : ${price} €.`
+  if (deliveryResult == 'home') {
+    price += 5;
+  }
 
+  /*   order.textContent = `Thank you for the order,${customerName}. You ordered pizza for ${sizeResult}. We will add toppings: ${toppingsResult.join(
+    ', '
+  )}and delivery method is: ${deliveryResult}. Total price is: ${price} €.`; */
 
-    order.style ['box-shadow'] = '0 0 1 grey'
-    console.log(customerName);
-    console.log(sizeResult);
-    console.log(toppingResult);
-    console.log(deliveryResult);
-    console.log(price);
+  order.innerHTML = `Thank you for the order, <span>${customerName}</span>. You ordered pizza for <span>${sizeResult}</span>. We will add toppings: <span>${toppingsResult.join(
+    ', '
+  )}</span> and delivery method is: <span>${deliveryResult}</span>. Total price is: <span>${price} €</span>.`;
 
-    form.reset();
+  order.style['boxShadow'] = '0 0 5px #999999';
+  order.style['border'] = '1px solid #eee';
+
+  form.reset();
 };
 
 form.addEventListener('submit', takeOrder);

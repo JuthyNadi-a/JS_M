@@ -29,8 +29,10 @@ const getInsurance = (event) => {
     } else if (userAge > 18 && userAge <= 25) {
         healthInsurance = healthInsurance + (healthInsurance * .1)
     } else if (userAge == 18) {
-            healthInsurance;
-        }
+        healthInsurance;
+    } else {
+        healthInsurance = 0;
+    }
         
     /* Health condition section */
 
