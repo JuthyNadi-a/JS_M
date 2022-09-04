@@ -77,4 +77,5 @@ const pizzaOrder = (id) => {
             totalPrice = price + toppingPrice + deliveryPrice;
             final.innerHTML = `Hi, <span>${userName}</span> 
             You ordered pizza <span>${pizzaName}</span>, toppings: <span>${toppingItems.join(' , ')}</span> & delivery option is <span>${deliveryOption}</span>. Total price is <span>${totalPrice}€</span>.`;
+            
         });
