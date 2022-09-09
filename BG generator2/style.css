@@ -16,11 +16,16 @@ main {
     margin-right: 28px ;
 }
 .displayColor{
-    /* background-color: rgb(145, 145, 148); */
+    /* background: linear-gradient(to right, rgb(124, 123, 123), rgb(42, 42, 111)); */
     flex: 6;
-    height: 100vh;
+    
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+    /* background-color: antiquewhite; */
+    height: 70vh;
+    width: 650px;
+    box-shadow: 2px 2px rgb(65, 64, 64);
 }
 
 /* Color input boxes */
@@ -37,13 +42,13 @@ input[type="color"]::-webkit-color-swatch {
 }
 /* Display color box */
 
-#colorBox {
+/* #colorBox {
     margin-top: 50px;
-    /* background-color: antiquewhite; */
+    /* background-color: antiquewhite; 
     height: 70vh;
     width: 650px;
     box-shadow: 2px 2px rgb(65, 64, 64);
-}
+} */
 
 /* Display color's css code */
 
