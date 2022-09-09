@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -12,21 +13,30 @@
         <div class="changeColor">
             <h2>Linear gradient generator</h2>
             <p>Colors</p>
-            <input type="color" name="" id="color1" value="#0000ff">
-            <input type="color" name="" id="color2" value="#00ffff">
+            <input type="color" name="" id="color1" value="#7c7b7b">
+            <input type="color" name="" id="color2" value="#2a2a6f">
             <p>Direction</p>
             <div class="topArrows">
+                <i class="fa-solid fa-square-arrow-down-right"></i>
                 <input type="radio" name="toDirection" value="right bottom" id="arrow1">
+                <label for="arrow1">down<i class="fa-solid fa-square-arrow-down-right"></i></label>
                 <input type="radio" name="toDirection" value="top bottom" id="arrow2">
+                <label for="arrow1">down<i class="fa-solid fa-square-arrow-down-right"></i></label>
                 <input type="radio" name="toDirection" value="left bottom" id="arrow3">
+                <i id="arrow3" class="fa-solid fa-square-arrow-down-right">down</i>
             </div>
             <div class="midArrows">
+                <label for="arrow1"><i class="fa-solid fa-square-arrow-down-right">down</i></label>
                 <input type="radio" name="toDirection" value="left right" id="arrow4">
+                <label for="arrow1"><i class="fa-solid fa-square-arrow-down-right">down</i></label>
                 <input type="radio" name="toDirection" value="right left" id="arrow5">
             </div>
             <div class="bottomArrows">
+                <label for="arrow1"><i class="fa-solid fa-square-arrow-down-right">down</i></label>
                 <input type="radio" name="toDirection" value="bottom left" id="arrow6">
+                <label for="arrow1"><i class="fa-solid fa-square-arrow-down-right">down</i></label>
                 <input type="radio" name="toDirection" value="bottom top" id="arrow7">
+                <label for="arrow1"><i class="fa-solid fa-square-arrow-down-right">down</i></label>
                 <input type="radio" name="toDirection" value="bottom right" id="arrow8">
             </div>
             <p>CSS code:</p>

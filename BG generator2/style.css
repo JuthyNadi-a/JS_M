@@ -3,26 +3,43 @@ main {
     height: 100vh;
 }
 .changeColor {
+    font-size: 1.5rem;
     background-color: rgb(218, 223, 223);
-   /*  width: 200px; */
-    height: 70vh;
+    height: 60vh;
     text-align: center;
     flex: 2;
-    /* border: 2px 2px 2px 2px rgb(243, 190, 190); */
     border-radius: 2px;
     box-shadow: 2px 2px rgb(35, 34, 34);
 }
 #arrow4{
     margin-right: 28px ;
 }
+input[type="radio"] {
+    display:none;
+}
+/* input[type="radio"] + label {
+    position: relative;
+    padding-left: 54px;
+    cursor:pointer;
+    font-size: 26px;
+} */
+label {
+    height: 20px;
+    width: 20px;
+}
+i{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(162, 16, 16);
+}
 .displayColor{
-    /* background: linear-gradient(to right, rgb(124, 123, 123), rgb(42, 42, 111)); */
+    background: linear-gradient(to right, #7c7b7b, #2a2a6f);
     flex: 6;
-    
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    /* background-color: antiquewhite; */
+    margin-left: 80px;
+    margin-right: 70px;
     height: 70vh;
     width: 650px;
     box-shadow: 2px 2px rgb(65, 64, 64);
@@ -51,8 +68,14 @@ input[type="color"]::-webkit-color-swatch {
 } */
 
 /* Display color's css code */
+.bottomArrows {
+    margin-bottom: 50px;
+}
 
 #result {
+    text-align: center;
     background-color: darkgrey;
-    height: 20px;
+    width: 90%;
+    margin-left: 25px;
+    /* height: 20px; */
 }
