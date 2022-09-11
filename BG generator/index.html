@@ -4,38 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>BG Generator</title>
+    <title>BG generator</title>
 </head>
-<body onload="colorUpdate()">
+<body>
     <main>
         <div class="changeColor">
             <h2>Linear gradient generator</h2>
             <p>Colors</p>
-            <input type="color" name="" id="color1" value="#0000ff">
-            <input type="color" name="" id="color2" value="#00ffff">
-            <p>Direction</p>
+            <input type="color" id="color1" value="#7c7b7b">
+            <input type="color" id="color2" value="#2a2a6f">
+            <p>Direction</p><br>
             <div class="topArrows">
-                <input type="radio" name="" id="arrow1">
-                <input type="radio" name="" id="arrow2">
-                <input type="radio" name="" id="arrow3">
+                <label for="arrow1" id="arrow1"><span class="material-icons">south_east</span></label>
+                <input type="radio" >
+                <label for="arrow2" id="arrow2"><span class="material-icons">south</span></label>
+                <input type="radio">
+                <label for="arrow3" id="arrow3"><span class="material-icons">south_west</span></label>
+                <input type="radio"> <br>
             </div>
             <div class="midArrows">
-                <input type="radio" name="" id="arrow4">
-                <input type="radio" name="" id="arrow5">
+                <label for="arrow4" id="arrow4"><span class="material-icons">east</span></label>
+                <input type="radio">
+                <label for="arrow5" id="arrow5"><span class="material-icons">west</span></label>
+                <input type="radio"> <br>
             </div>
             <div class="bottomArrows">
-                <input type="radio" name="" id="arrow6">
-                <input type="radio" name="" id="arrow7">
-                <input type="radio" name="" id="arrow8">
+                <label for="arrow6" id="arrow6"><span class="material-icons">north_east</span></label>
+                <input type="radio">
+                <label for="arrow7" id="arrow7"><span class="material-icons">north</span></label>
+                <input type="radio">
+                <label for="arrow8" id="arrow8"><span class="material-icons">north_west</span></label>
+                <input type="radio">
             </div>
             <p>CSS code:</p>
             <p id="result"></p>
         </div>
         <div class="displayColor">
-            <p id="colorBox"></p>
+            <!-- <p id="colorBox"></p> -->
         </div>
+    </div>
     </main>
+
 
     <script src="script.js"></script>
 </body>
