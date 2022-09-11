@@ -1,0 +1,30 @@
+.carInput{
+    display: flex;
+}
+h2 {
+    margin: 15px;
+}
+/* Car data input part */
+.carData {
+    background-color: rgb(146, 160, 185);
+    height: 100vh;
+    flex: 3;
+    margin: 10px;
+}
+input,button,label {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+button{
+    margin-left: 20px;
+    height: 60px;
+    width: 160px;
+    border-radius: 8px;
+}
+/* car database */
+.carDatabase {
+    background-color: rgb(205, 140, 116);
+    height: 100vh;
+    flex: 3;
+}

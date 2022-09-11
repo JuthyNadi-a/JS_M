@@ -3,39 +3,57 @@ main {
     height: 100vh;
 }
 .changeColor {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     background-color: rgb(218, 223, 223);
-    height: 60vh;
+    height: 70vh;
     text-align: center;
-    flex: 2;
+    flex: 3;
     border-radius: 2px;
     box-shadow: 2px 2px rgb(35, 34, 34);
 }
+#arrow1, #arrow2, #arrow3 {
+    margin-left: 10px;
+    margin-right: 20px;
+}
 #arrow4{
-    margin-right: 28px ;
+    margin-right: 144px ;
+    
+}
+#arrow5{
+    margin-right: 5px;
+}
+#arrow6, #arrow7, #arrow8 {
+    margin-left: 10px;
+    margin-right: 20px;
 }
 input[type="radio"] {
     display:none;
 }
-/* input[type="radio"] + label {
+label {
     position: relative;
-    padding-left: 54px;
+    padding: 20px;
     cursor:pointer;
     font-size: 26px;
-} */
-label {
-    height: 20px;
-    width: 20px;
+    border-style: solid;
+    border-width: 3px; 
+    color: aliceblue;
+    border-color: rgb(61, 59, 59);
+    background-color: #2f2e2e;
+    border-radius: 8px;
 }
-i{
-    height: 20px;
-    width: 20px;
-    background-color: rgb(162, 16, 16);
+
+.topArrows {
+    margin-bottom: 60px;
+}
+.midArrows {
+    margin-bottom: 60px;
+}
+.bottomArrows {
+    margin-bottom: 60px;
 }
 .displayColor{
     background: linear-gradient(to right, #7c7b7b, #2a2a6f);
-    flex: 6;
-    display: flex;
+    flex: 7;
     justify-content: center;
     margin-top: 50px;
     margin-left: 80px;
@@ -57,15 +75,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
 	border: none;
 }
-/* Display color box */
-
-/* #colorBox {
-    margin-top: 50px;
-    /* background-color: antiquewhite; 
-    height: 70vh;
-    width: 650px;
-    box-shadow: 2px 2px rgb(65, 64, 64);
-} */
 
 /* Display color's css code */
 .bottomArrows {
@@ -77,5 +86,4 @@ input[type="color"]::-webkit-color-swatch {
     background-color: darkgrey;
     width: 90%;
     margin-left: 25px;
-    /* height: 20px; */
 }
