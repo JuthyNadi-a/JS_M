@@ -4,7 +4,7 @@ main {
     height: 100vh;
 }
 .changeColor {
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color: rgb(218, 223, 223);
     height: 80vh;
     text-align: center;
@@ -64,15 +64,15 @@ label {
 
 .topArrows {
     margin-bottom: 60px;
-    height: 5vh;
+    height: 3vh;
 }
 .midArrows {
     margin-bottom: 60px;
-    height: 5vh;
+    height: 3vh;
 }
 .bottomArrows {
     margin-bottom: 60px;
-    height: 5vh;
+    height: 3vh;
 }
 
 .displayColor{
