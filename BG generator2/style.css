@@ -12,6 +12,22 @@ main {
     border-radius: 2px;
     box-shadow: 2px 2px rgb(35, 34, 34);
 }
+/* Color input boxes */
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+    width: 80px;
+    margin-right: 10px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0px;
+    width: 80px;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+    height: 40px;
+}
 #arrow1, #arrow2, #arrow3 {
     margin-left: 13px;
     margin-right: 20px;
@@ -39,7 +55,7 @@ label {
     border-width: 3px; 
     color: aliceblue;
     border-color: rgb(61, 59, 59);
-    background-color: #2f2e2e;
+    background-color: #525050;
     border-radius: 8px;
 }
 
@@ -52,6 +68,7 @@ label {
 .bottomArrows {
     margin-bottom: 60px;
 }
+
 .displayColor{
     background: linear-gradient(to right, #7c7b7b, #2a2a6f);
     flex: 7;
@@ -63,24 +80,7 @@ label {
     width: 650px;
     box-shadow: 2px 2px rgb(65, 64, 64);
 }
-
-/* Color input boxes */
-
-input[type="color"] {
-	-webkit-appearance: none;
-	border: none;
-}
-input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
-}
-input[type="color"]::-webkit-color-swatch {
-	border: none;
-}
-
 /* Display color's css code */
-.bottomArrows {
-    margin-bottom: 50px;
-}
 
 #result {
     text-align: center;
