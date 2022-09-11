@@ -6,8 +6,9 @@ main {
 .changeColor {
     font-size: 1.5rem;
     background-color: rgb(218, 223, 223);
-    height: 90vh;
+    height: 80vh;
     text-align: center;
+    margin-top: 20px;
     flex: 3;
     border-radius: 2px;
     box-shadow: 2px 2px rgb(35, 34, 34);
@@ -28,21 +29,8 @@ input[type="color"]::-webkit-color-swatch {
 	border: none;
     height: 40px;
 }
-#arrow1, #arrow2, #arrow3 {
-    margin-left: 13px;
-    margin-right: 20px;
-}
-#arrow4{
-    margin-right: 144px ;
-    
-}
-#arrow5{
-    margin-right: 8px;
-}
-#arrow6, #arrow7, #arrow8 {
-    margin-left: 15px;
-    margin-right: 20px;
-}
+/* Arrows */
+
 input[type="radio"] {
     display:none;
 }
@@ -58,15 +46,33 @@ label {
     background-color: #525050;
     border-radius: 8px;
 }
+#arrow1, #arrow2, #arrow3 {
+    margin-left: 13px;
+    margin-right: 20px;
+}
+#arrow4{
+    margin-right: 144px ;
+    
+}
+#arrow5{
+    margin-right: 8px;
+}
+#arrow6, #arrow7, #arrow8 {
+    margin-left: 15px;
+    margin-right: 20px;
+}
 
 .topArrows {
     margin-bottom: 60px;
+    height: 5vh;
 }
 .midArrows {
     margin-bottom: 60px;
+    height: 5vh;
 }
 .bottomArrows {
     margin-bottom: 60px;
+    height: 5vh;
 }
 
 .displayColor{
