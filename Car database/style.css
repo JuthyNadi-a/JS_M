@@ -6,7 +6,6 @@ h2 {
 }
 /* Car data input part */
 .carData {
-    background-color: rgb(146, 160, 185);
     height: 100vh;
     flex: 3;
     margin: 10px;
@@ -16,15 +15,57 @@ input,button,label {
     padding: 10px;
     font-size: 1.5rem;
 }
+label {
+    display: inline-block;
+    width: 200px;
+    margin: 10px 0;
+}
 button{
+    margin-top: 40px;
     margin-left: 20px;
     height: 60px;
     width: 160px;
     border-radius: 8px;
+    color: aliceblue;
+    background-color: rgb(4, 64, 137);
 }
 /* car database */
 .carDatabase {
-    background-color: rgb(205, 140, 116);
-    height: 100vh;
     flex: 3;
+    margin-left: 20px;
+}
+table{
+    margin-left: 20px;
+}
+table,th,td,tr{
+    font-size: 2.0rem;
+    border: 0.1rem solid white;
+    border-collapse: collapse;
+    padding: 10px;
+}
+.thead {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-align: center;
+    height: 30px;
+    color: aliceblue;
+    background-color: rgb(100, 190, 239);
+}
+td,tr {
+    color: black;
+}
+th {
+    padding-top: 15px;
+}
+p {
+    font-size: 2rem;
+}
+#colored {
+    background-color: rgb(44, 119, 185);
+    height: 50px;
+}
+span {
+    color: rgb(15, 46, 172);
+    font-weight: 900;
+    font-size: 2.2rem;
 }

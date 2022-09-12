@@ -10,14 +10,18 @@
 <body>
     <main>
         <div class="search">
+            <p id="colored"></p>
             <h2>Search car by license number</h2>
             <label for="search">License number</label>
-            <input type="search" name="" id="search">
+            <input type="search" name="" id="search"><br>
             <button id="searchBtn">Search</button>
+            <p id="result"></p>
+            <p id="colored"></p>
         </div>
         <div class="carInput">
             <div class="carData">
-            <h2>Insert car data</h2>
+            <form>
+                <h2>Insert car data</h2>
             <div>
                 <label for="license">License number</label>
                 <input type="text" name="" id="license">
@@ -44,15 +48,24 @@
             </div>
             <button id="add">Add car</button>
             <button type="reset" id="reset">Reset</button>
-        </div>
-        <div class="carDatabase">
+            </form>
+            </div>
+            <div class="carDatabase">
             <h2>Cars database</h2>
-            <table>
-
+            <table id="carTable">
+                    <tr>
+                    <th class="thead">LICENSE</th> 
+                    <th class="thead">MAKER</th> 
+                    <th class="thead">MODEL</th>
+                    <th class="thead">OWNER</th>
+                    <th class="thead">PRICE</th>
+                    <th class="thead">COLOR</th>
+                    </tr>
             </table>
-        </div>
+            </div>
         </div>
     </main>
+    <p id="colored"></p>
 
     <script src="script.js"></script>
 </body>
