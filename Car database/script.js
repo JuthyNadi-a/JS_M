@@ -12,10 +12,10 @@ let search = document.querySelector('#searchBtn');
 
 addBtn.addEventListener('click', function(event) {
     event.preventDefault();
-  document.getElementById("carTable").style.display = "block";
+  document.getElementById("tbody").style.display = "block";
       
-      let table = document.getElementById("carTable");
-      let row = table.insertRow(-1);
+      let tbody = document.getElementById("tbody");
+      let row = tbody.insertRow(-1);
       let licenseNumber = row.insertCell(0);
       let carMaker = row.insertCell(1);
       let carModel = row.insertCell(2);

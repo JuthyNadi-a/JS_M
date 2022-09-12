@@ -1,24 +1,19 @@
 <html>
     <head>
         <title>Expense Tracker</title>
-        
-        <style type="text/css">
-            table
-            {
-                display: none;
-            }
-        </style>
     </head>
     
     <body>
-        <h1>Expense Tracker</h1>
         <main>
-            <!-- <div class="search">
+            <div class="search">
+                <p id="colored"></p>
                 <h2>Search car by license number</h2>
                 <label for="search">License number</label>
                 <input type="search" name="" id="search"><br>
                 <button id="searchBtn">Search</button>
-            </div> -->
+                <p id="result"></p>
+                <p id="colored"></p>
+            </div>
             <div class="carInput">
                 <div class="carData">
                 <form>
@@ -53,8 +48,7 @@
                 </div>
                 <div class="carDatabase">
                 <h2>Cars database</h2>
-                <table id="#carTable">
-                    <thead>
+                <table id="carTable">
                         <tr>
                         <th class="thead">LICENSE</th> 
                         <th class="thead">MAKER</th> 
@@ -63,69 +57,12 @@
                         <th class="thead">PRICE</th>
                         <th class="thead">COLOR</th>
                         </tr>
-                    </thead>
-                    <!-- <tbody>
-                    </tbody> -->
                 </table>
                 </div>
             </div>
         </main>
-        <!-- <form action="">
-            <label for="date">Date: </label>
-            <input type="date" id="date">
-            <br>
-            
-            <label for="desc">Description: </label>
-            <input type="text" id="desc">
-            <br>
-            
-            <label for="amount">Amount: </label>
-            <input type="text" id="amount">
-            <br>
-            
-            <input type="button" id="submit" value="Submit">
-            <br>
-        </form>
-        
-        <table id="table">
-            <tr>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Amount</th>
-            </tr>
-        </table> -->
+        <p id="colored"></p>
     
-        <script type="text/javascript">
-            let license = document.querySelector('#license');
-            let maker = document.querySelector('#maker');
-            let model = document.querySelector('#model');
-            let owner = document.querySelector('#owner');
-            let price = document.querySelector('#price');
-            let color = document.querySelector('#color');
-            let addBtn = document.querySelector('#add');
-            document.getElementById("add").onclick=function()
-            {
-                document.getElementById("carTable").style.display="block";
-                
-                var table = document.getElementById("carTable");
-                var row = table.insertRow(-1);
-                var licenseNumber = row.insertCell(0);
-                var carMaker = row.insertCell(1);
-                var carModel = row.insertCell(2);
-                var carOwner = row.insertCell(3);
-                var carPrice = row.insertCell(4);
-                var carColor= row.insertCell(5);
-                licenseNumber.innerHTML = license.value;
-                carMaker.innerHTML= maker.value;
-                carModel.innerHTML= model.value;
-                carOwner.innerHTML = owner.value;
-                carPrice.innerHTML = price.value;
-                carColor.innerHTML = color.value;
-                            
-                return false;
-                console.log(carMaker.innerHTML);
-            }
-        
-        </script>
+        <script src="test.js"></script>
     </body>
 </html>
