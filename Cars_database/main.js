@@ -19,17 +19,32 @@ addBtn.addEventListener('click', function (event) {
             this.color = color;
         }
         data() {
-            console.log(`${this.license}, ${this.maker}, ${this.model}, ${this.owner}, ${this.price}, ${this.color}`)
+            return `${this.license}, ${this.maker}, ${this.model}, ${this.owner}, ${this.price}, ${this.color}`;
         }
     }
-    const newData = new Car (license.value, maker.value, model.value, owner.value, price.value, color.value);
-    newData.data();
     
     function fillCarArray() {
         const newData = new Car (license.value, maker.value, model.value, owner.value, price.value, color.value); 
         carArray.push(newData);
+        if (carArray.length > 1) {
+            carArray.splice(0, 1)
+        }
     }
+
     fillCarArray();
     console.log(carArray);
+
+    let table = document.querySelector('#carTable');
+    createTable(table, carArray);
 })
-/* `${document.querySelector('#license').value}, ${document.querySelector('#maker').value}` */
+
+const createTable = (table, data) => {
+    for (let element of data) {
+        let row = table.insertRow();
+        for (key in element) {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+        }
+    }
+}
