@@ -1,4 +1,32 @@
+let form = document.querySelector('form');
 let color1 = document.querySelector('#color1');
+let color2 = document.querySelector('#color2');
+let direction = document.querySelectorAll('input[name="direction"]');
+let cssCode = document.querySelector('#result');
+
+function colorUpdate(event) {
+    event.preventDefault();
+  let selectedValue;
+  for (const element of direction) {
+    if (element.checked) {
+      selectedValue = element.value;
+    }
+    console.log(element.value);
+}
+let gradient = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
+console.log(gradient);
+document.body.style.backgroundImage = gradient;
+cssCode.textContent = `${gradient};`;
+};
+
+form.addEventListener('change', colorUpdate);
+
+
+
+/* OLDER VERSION */
+
+
+/* let color1 = document.querySelector('#color1');
 let color2 = document.querySelector('#color2');
 let colorBox = document.querySelector(".displayColor");
 let arrow1 = document.querySelector('#arrow1');
@@ -16,7 +44,7 @@ function colorUpdate(event) {
     `linear-gradient(to right, ${color1.value}, ${color2.value})`;
     cssCode.textContent = colorBox.style.background;
   }
-  /*  Arrows */
+  /*  Arrows
   arrow1.addEventListener('click', function (event){
     colorBox.style.background  = event.target.value;
     colorBox.style.background =
@@ -68,3 +96,4 @@ function colorUpdate(event) {
 color1.addEventListener("input", colorUpdate)
 color2.addEventListener("input", colorUpdate)
 
+ */

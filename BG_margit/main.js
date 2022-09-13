@@ -1,6 +1,8 @@
 let form = document.querySelector('form');
+let color1 = document.querySelector('#color1');
+let color2 = document.querySelector('#color2');
 let direction = document.querySelectorAll('input[name="direction"]');
-let cssCode = document.querySelector('result');
+let cssCode = document.querySelector('#result');
 
 function colorUpdate(event) {
     event.preventDefault();
@@ -9,9 +11,11 @@ function colorUpdate(event) {
     if (element.checked) {
       selectedValue = element.value;
     }
+    console.log(element.value);
 }
-colorBox.style.backgroundImage  = event.target.value;
-colorBox.style.backgroundImage = gradient;
+let gradient = `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
+console.log(gradient);
+document.body.style.backgroundImage = gradient;
 cssCode.textContent = `${gradient};`;
 };
 
