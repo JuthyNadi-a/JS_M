@@ -1,10 +1,23 @@
+body{
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    padding: auto;
+}
+
+h2 {
+    font-size: 1.9rem;
+    font-weight: 1200;
+    margin: 15px;
+    margin-bottom: 40px;
+}
+.search {
+    margin: 10px;
+}
+/* Car data input part */
 .carInput{
     display: flex;
 }
-h2 {
-    margin: 15px;
-}
-/* Car data input part */
 .carData {
     height: 100vh;
     flex: 3;
@@ -16,9 +29,10 @@ input,button,label {
     font-size: 1.5rem;
 }
 label {
+    font-size: 2rem;
     display: inline-block;
-    width: 200px;
-    margin: 10px 0;
+    width: 280px;
+    margin: 20px 10px;
 }
 button{
     margin-top: 40px;
@@ -38,34 +52,21 @@ table{
     margin-left: 20px;
 }
 table,th,td,tr{
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     border: 0.1rem solid white;
     border-collapse: collapse;
     padding: 10px;
 }
-.thead {
-    display: inline-block;
-    font-size: 1.2rem;
-    text-align: center;
-    height: 30px;
-    color: aliceblue;
-    background-color: rgb(100, 190, 239);
-}
-td,tr {
-    color: black;
-}
-#tbody td {
-    padding: 10px;
-   
-}
-th, td {
-    background-color: rgb(189, 173, 173);
-    width: auto;
-    height: 30px;
-}
 th {
-    padding-top: 20px;
-    width: fit-content;
+    background-color: rgb(37, 106, 180);
+    color: aliceblue;
+}
+tr {
+    background-color: rgb(224, 219, 219);
+}
+td {
+    font-size: 1.8rem;
+    text-align: center;
 }
 p {
     font-size: 2rem;

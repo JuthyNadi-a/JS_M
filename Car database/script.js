@@ -7,15 +7,16 @@ let owner = document.querySelector('#owner');
 let price = document.querySelector('#price');
 let color = document.querySelector('#color');
 let addBtn = document.querySelector('#add');
+let licensePlate = document.querySelector('#search');
 let search = document.querySelector('#searchBtn');
 
 
 addBtn.addEventListener('click', function(event) {
     event.preventDefault();
-  document.getElementById("tbody").style.display = "block";
+  document.getElementById("carTable").style.display = "block";
       
-      let tbody = document.getElementById("tbody");
-      let row = tbody.insertRow(-1);
+      let table = document.getElementById("carTable");
+      let row = table.insertRow(-1);
       let licenseNumber = row.insertCell(0);
       let carMaker = row.insertCell(1);
       let carModel = row.insertCell(2);
@@ -30,13 +31,16 @@ addBtn.addEventListener('click', function(event) {
       carColor.innerHTML = color.value;
       
      
-      /* form.reset(); */
+    console.table(table.outerText);
   return false;
 })
 search.addEventListener('click', function() {
-    let licenseSearch;
-
-    if (licenseSearch =  license.value) {
+    let licenseNumber = licensePlate.value
+    let search = license.value.includes(licenseNumber);
+    console.log(search);
+    console.log(licenseNumber);
+    console.log(license.value);
+    if (search === true) {
        result.innerHTML = `The license plate is <span>${license.value}</span>.The model of the car is <span>${model.value}</span> and it belongs to <span>${owner.value} </span>.`
     } else {
         result.innerHTML = `There is no car with license plate added to the system. Try again?`
