@@ -1,0 +1,79 @@
+body{
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    padding: auto;
+}
+
+h2 {
+    font-size: 1.9rem;
+    font-weight: 1200;
+    margin: 15px;
+    margin-bottom: 40px;
+}
+.search {
+    margin: 10px;
+}
+/* Car data input part */
+.carInput{
+    display: flex;
+}
+.carData {
+    flex: 3;
+    margin: 10px;
+}
+input,button,label {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+label {
+    font-size: 1.5rem;
+    display: inline-block;
+    width: 280px;
+    margin: 20px 10px;
+}
+button{
+    margin-top: 40px;
+    margin-left: 20px;
+    height: 60px;
+    width: 160px;
+    border-radius: 8px;
+    color: aliceblue;
+    background-color: rgb(4, 64, 137);
+}
+/* car database */
+.carDatabase {
+    flex: 3;
+    margin-left: 20px;
+}
+
+table,th,td,tr{
+    font-size: 1.5rem;
+    border: 0.1rem solid white;
+    border-collapse: collapse;
+    padding: 10px;
+}
+th {
+    background-color: rgb(37, 106, 180);
+    color: aliceblue;
+}
+tr {
+    background-color: rgb(224, 219, 219);
+}
+td {
+    font-size: 1.8rem;
+    text-align: center;
+}
+p {
+    font-size: 2rem;
+}
+#colored {
+    background-color: rgb(44, 119, 185);
+    height: 50px;
+}
+span {
+    color: rgb(15, 46, 172);
+    font-weight: 900;
+    font-size: 2.2rem;
+}
