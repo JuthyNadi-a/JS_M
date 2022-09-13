@@ -76,7 +76,7 @@ label {
 }
 
 .displayColor{
-    background: linear-gradient(to right, #7c7b7b, #2a2a6f);
+    background: linear-gradient(#7c7b7b, #2a2a6f);
     flex: 7;
     justify-content: center;
     margin-top: 50px;

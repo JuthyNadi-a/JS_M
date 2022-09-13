@@ -6,7 +6,12 @@ let owner = document.querySelector('#owner');
 let price = document.querySelector('#price');
 let color = document.querySelector('#color');
 let addBtn = document.querySelector('#add');
+let table = document.querySelector('#carTable');
+let search = document.querySelector('#search');
+let searchBtn =  document.querySelector('#searchBtn');
 let carArray = [];
+
+ /* Get input data */
 addBtn.addEventListener('click', function (event) {
     event.preventDefault();
     class Car {
@@ -22,7 +27,7 @@ addBtn.addEventListener('click', function (event) {
             return `${this.license}, ${this.maker}, ${this.model}, ${this.owner}, ${this.price}, ${this.color}`;
         }
     }
-    
+    /* fill array from input data */
     function fillCarArray() {
         const newData = new Car (license.value, maker.value, model.value, owner.value, price.value, color.value); 
         carArray.push(newData);
@@ -32,19 +37,33 @@ addBtn.addEventListener('click', function (event) {
     }
 
     fillCarArray();
-    console.log(carArray);
+    console.table(carArray);
 
-    let table = document.querySelector('#carTable');
+    /*  create table */
+    const createTable = (table, data) => {
+        for (let element of data) {
+            let row = table.insertRow();
+            for (key in element) {
+                let cell = row.insertCell();
+                let text = document.createTextNode(element[key]);
+                cell.appendChild(text);
+            }
+        }
+    }
     createTable(table, carArray);
 })
 
-const createTable = (table, data) => {
-    for (let element of data) {
-        let row = table.insertRow();
-        for (key in element) {
-            let cell = row.insertCell();
-            let text = document.createTextNode(element[key]);
-            cell.appendChild(text);
-        }
+/* Search license plate */
+
+searchBtn.addEventListener('click', function() {
+    let searchValue = search.value;
+    console.log(searchValue);
+    console.log(carArray[0].license);
+
+    if (carArray.includes(carArray[0].license) == searchValue) {
+        console.log('found');
+    } else  {
+         console.log('not found');
     }
-}
+})
+/* if (carArray.includes(carArray[0].license)!= searchValue) */

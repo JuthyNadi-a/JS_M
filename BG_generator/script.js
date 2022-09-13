@@ -10,7 +10,6 @@ let arrow6 = document.querySelector('#arrow6');
 let arrow7 = document.querySelector('#arrow7');
 let arrow8 = document.querySelector('#arrow8');
 let cssCode = document.querySelector('#result');
-
 function colorUpdate(event) {
     colorBox.style.background  = event.target.value;
     colorBox.style.background =
@@ -30,7 +29,6 @@ function colorUpdate(event) {
     `linear-gradient(to bottom, ${color1.value}, ${color2.value})`;
     cssCode.textContent = colorBox.style.background;
   }) 
-  
   arrow3.addEventListener('click', function (event){
     colorBox.style.background  = event.target.value;
     colorBox.style.background =
@@ -67,8 +65,6 @@ function colorUpdate(event) {
     `linear-gradient(to right top, ${color1.value}, ${color2.value})`;
     cssCode.textContent = colorBox.style.background;
   }) 
-  
-
 color1.addEventListener("input", colorUpdate)
 color2.addEventListener("input", colorUpdate)
 

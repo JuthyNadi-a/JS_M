@@ -43,30 +43,14 @@ table,th,td,tr{
     border-collapse: collapse;
     padding: 10px;
 }
-.thead {
-    display: inline-block;
-    font-size: 1.2rem;
-    text-align: center;
-    height: 30px;
-    color: aliceblue;
-    background-color: rgb(100, 190, 239);
-}
-td,tr {
-    color: black;
-}
-#tbody td {
-    padding: 10px;
-   
-}
-th, td {
-    background-color: rgb(189, 173, 173);
-    width: auto;
-    height: 30px;
-}
 th {
-    padding-top: 20px;
-    width: fit-content;
+    background-color: rgb(52, 154, 204);
+    color: aliceblue;
 }
+tr {
+    background-color: rgb(211, 209, 208);
+}
+
 p {
     font-size: 2rem;
 }
