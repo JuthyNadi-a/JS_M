@@ -19,7 +19,7 @@ h2 {
     display: flex;
 }
 .carData {
-    height: 100vh;
+    height: 60vh;
     flex: 3;
     margin: 10px;
 }
@@ -48,9 +48,7 @@ button{
     flex: 3;
     margin-left: 20px;
 }
-table{
-    margin-left: 20px;
-}
+
 table,th,td,tr{
     font-size: 1.8rem;
     border: 0.1rem solid white;
