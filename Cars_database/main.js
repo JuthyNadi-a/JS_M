@@ -6,12 +6,12 @@ let owner = document.querySelector('#owner');
 let price = document.querySelector('#price');
 let color = document.querySelector('#color');
 let addBtn = document.querySelector('#add');
-let table = document.querySelector('#carTable');
 let search = document.querySelector('#search');
-let searchBtn =  document.querySelector('#searchBtn');
+let table = document.querySelector('.tbody');
 let carArray = [];
+let searchBtn =  document.querySelector('#searchBtn');
 
- /* Get input data */
+/* Get input data */
 addBtn.addEventListener('click', function (event) {
     event.preventDefault();
     class Car {
@@ -31,39 +31,52 @@ addBtn.addEventListener('click', function (event) {
     function fillCarArray() {
         const newData = new Car (license.value, maker.value, model.value, owner.value, price.value, color.value); 
         carArray.push(newData);
-        if (carArray.length > 1) {
+        /* if (carArray.length > 1) {
             carArray.splice(0, 1)
-        }
+        } */
     }
-
+    
     fillCarArray();
     console.table(carArray);
-
+    
     /*  create table */
-    const createTable = (table, data) => {
-        for (let element of data) {
-            let row = table.insertRow();
-            for (key in element) {
-                let cell = row.insertCell();
-                let text = document.createTextNode(element[key]);
-                cell.appendChild(text);
-            }
-        }
-    }
+    table.innerHTML = "";
     createTable(table, carArray);
 })
-
+const createTable = (table, data) => {
+    for (let element of data) {
+        let row = table.insertRow();
+        for (key in element) {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+        }
+    }
+}
 /* Search license plate */
 
 searchBtn.addEventListener('click', function() {
-    let searchValue = search.value;
-    console.log(searchValue);
-    console.log(carArray[0].license);
-
-    if (carArray.includes(carArray[0].license) == searchValue) {
-        console.log('found');
-    } else  {
-         console.log('not found');
+    let searchLicense = search.value;
+    /* carArray.forEach(car => {
+        console.log(car)
+        console.log(searchLicense);
+        if (searchLicense = car.license) {
+            console.log(car.license);
+            console.log(searchLicense);
+            result.innerHTML = `The license plate is <span>${car.license}</span>.The model of the car is <span>${car.model}</span> and it belongs to <span>${car.owner} </span>.`;
+        } else  {
+             result.innerHTML = `There is no car with license plate added to the system. Try again?`;
+        }
+    })
+ */
+    for (let i = 0; i < carArray.length; i++) {
+        console.log(i);
+        if (searchLicense == carArray[i].license) {
+            console.log(carArray[i].license);
+            console.log(searchLicense);
+            result.innerHTML = `The license plate is <span>${carArray[i].license}</span>.The model of the car is <span>${carArray[i].model}</span> and it belongs to <span>${carArray[i].owner} </span>.`;
+        } else  {
+             result.innerHTML = `There is no car with license plate added to the system. Try again?`;
+        }
     }
 })
-/* if (carArray.includes(carArray[0].license)!= searchValue) */

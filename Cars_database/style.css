@@ -1,3 +1,6 @@
+body {
+    margin: 1.5rem;
+}
 .carInput{
     display: flex;
 }
@@ -39,16 +42,18 @@ table{
 }
 table,th,td,tr{
     font-size: 2.0rem;
+    text-align: center;
     border: 0.1rem solid white;
     border-collapse: collapse;
-    padding: 10px;
+    padding: 1.2rem;
 }
 th {
     background-color: rgb(52, 154, 204);
     color: aliceblue;
 }
-tr {
-    background-color: rgb(211, 209, 208);
+#carTable tr:nth-child(even) {
+    background-color: rgb(194, 190, 190);
+    color: aliceblue;
 }
 
 p {
