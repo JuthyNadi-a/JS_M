@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Dom project</title>
+</head>
+<body>
+    <!-- 
+    1. header backgrnd change when scroll >>
+    2. header fixed, color change >>
+    3. scroll >>
+    4. after scrolling 200px, to top button
+    5. mobile view: min-width: 360px (standard), iphn se 375px, with hamburger menu
+    6.font size,header area fix in mobile view
+    7. click hambrgr menu > open menu, when scroll menu bar goes back
+    8. when menu open , cant scroll
+    MODAL
+    1. click open, cant scroll background
+    2. background should be dimmed
+    3. close button, position to top.
+    4. when closed, background back to normal, scrolling
+ -->
+    <header class="active">
+        <div class="logo">
+            <h1><a href="#">Juthy Nadia</a></h1>
+         </div>
+         <nav>
+             <button id="mblBtn">
+                <span class="material-symbols-rounded" id="menuBar">menu</span>
+             </button>
+            <ul>
+             <li><a href="#">First</a></li>
+             <li><a href="#">Second</a></li>
+             <li><a href="#">Third</a></li>
+             <li><a href="#">Fourth</a></li>
+            </ul> 
+         </nav>
+    </header>
+    <main>
+        <section class="container" id="container1">
+            <h2>First</h2>
+            <button class="modalBtn btn">Important</button>
+        </section>
+        <section class="container" id="container2">
+            <h2>Second</h2>
+        </section>
+        <section class="container" id="container3">
+            <h2>Third</h2>
+        </section>
+        <div class="modal">
+            <div class="modal_content">
+                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos autem laborum, soluta provident labore dolor.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos autem laborum, soluta provident labore dolor.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos autem laborum, soluta provident labore dolor.</p>
+                <button class="close_button btn">x</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy 2022
+        <button class="btn" id="topBtn">
+            <span class="material-symbols-outlined icon">
+                arrow_upward
+            </span>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
