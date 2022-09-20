@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(112, 108, 108);
+    min-height: 100vh;
+    background: url('https://thumbs.dreamstime.com/b/autumn-forest-illustration-44169112.jpg') no-repeat center center/cover;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-top: 150px;
+}
+h3{
+    font-size: 2rem;
+    margin: 50px;
+}
+button {
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 20px 40px;
+    font-family: inherit;
+    font-size: 2.0rem;
+    border-radius: 8px;
+    background-color: rgb(206, 80, 6);
+    color: azure;
+    border: none;
+    box-shadow: 1px 1px 1px gray;
+}
+/* Circles */
+.circles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    cursor: pointer;
+    margin: 20px;
+    background-color: rgb(177, 141, 78);
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    background: url(images1.jpeg) no-repeat center center/cover;
+    /* background-color: rgb(226, 177, 43); */
+    box-shadow: 2px 2px 2px 2px rgb(62, 61, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* pointer-events: none; */
+}
+.circle.active {
+   background: url(images1.jpeg) no-repeat center center/cover;
+}
+/* Modal */
+.overlay {
+    display: none;
+}
+.overlay {
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(128, 126, 126, 0.8);
+    justify-content: center;
+    align-items: center;
+    color: #333;
+  }
+.modal {
+    position: relative;
+    background: white;
+    min-height: 50vh;
+    width: 50vw;
+    border-radius: 10px;
+    color: #032330;
+    padding: 3rem;
+}
+  
+.close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+/* start stop buttons */
+/* .stop {
+    display: none;
+} */
+.start{
+    /* display: ; */
+}
