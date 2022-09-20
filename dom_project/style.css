@@ -111,7 +111,7 @@ h2 {
     height: 100%;
     background-color: rgba(244, 245, 250, 0.75);
     border: 1rem 1rem 1rem gray;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     display:none;
@@ -132,6 +132,11 @@ h2 {
     right: 0;
 }
 
+.show_modal {
+    display: flex;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
 /* MOBILE */
 @media only screen and (max-width: 870px) {
     body {

@@ -25,21 +25,32 @@ window.onscroll = function() {
   scrollFunction();
 };
 
+/* to top */
 
+const getToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
+topButton.addEventListener('click', getToTop);
 
 /* MODAL */
 const modal = document.querySelector('.modal');
 const modalButton = document.querySelector('.modalBtn');
 const closeButton = document.querySelector('.close_button')
 
-const getToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-};
-modalButton.addEventListener('click', () => {
+const showModal = () => {
+  modal.classList.toggle('show_modal');
+}
+function windowOnClick(event) {
+  if (event.target === modal) {
+    document.body.style.overflow = 'hidden'
+    showModal();
+  }
+}
+modalButton.addEventListener('click', showModal);
+closeButton.addEventListener('click', showModal);
+window.addEventListener("click", windowOnClick);
 
-})
-topButton.addEventListener('click', getToTop);
 /* MOBILE */
 
 const mblMenu = () => {
