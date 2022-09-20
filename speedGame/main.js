@@ -7,15 +7,20 @@ const result = document.querySelector("#display");
 
 const startGame = () => {
 console.log('game started');
-active.addEventListener('click', activeCircle);
-for (let circle of circles) {
-  circle.addEventListener("click", activeCircle);
-}
+
+  /* for (let circle of circles) {
+    circle.addEventListener("click", activeCircle);
+  } */
+
+  /* console.log(circles); */
+  circles.forEach((circle) => {
+    /* console.log(circle); */
+    circle.addEventListener("click", activeCircle)
+  })
 }
 /* cicle clicked */
 const activeCircle = (e) => {
-        console.log('circle clicked');
-        display.innerHTML = `ID of circle ${e.target.innerHTML} is ${e.target.id}`
+    display.innerHTML = `Circle ${e.target.innerHTML} is clicked`
 }
 /* Stop game */ 
 const stopGame = () => {

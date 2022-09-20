@@ -5,9 +5,9 @@
     overscroll-behavior: none;
 }
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Titan One', cursive;
     text-align: center;
-    text-shadow: 2px 2px 2px rgb(112, 108, 108);
+    text-shadow: 2px 2px 2px rgb(151, 149, 149);
     min-height: 100vh;
     background: url('https://thumbs.dreamstime.com/b/autumn-forest-illustration-44169112.jpg') no-repeat center center/cover;
 }
@@ -41,13 +41,12 @@ button {
 .circle {
     cursor: pointer;
     margin: 20px;
-    background-color: rgb(177, 141, 78);
     border-radius: 50%;
     height: 250px;
     width: 250px;
-    background: url(images1.jpeg) no-repeat center center/cover;
-    /* background-color: rgb(226, 177, 43); */
-    box-shadow: 2px 2px 2px 2px rgb(62, 61, 34);
+    /* background: url(images1.jpeg) no-repeat center center/cover; */
+    background: rgba(236, 176, 10, 0.564);
+    box-shadow: 3px 3px 3px 3px rgb(38, 38, 20);
     display: flex;
     justify-content: center;
     align-items: center;
