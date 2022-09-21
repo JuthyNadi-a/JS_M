@@ -58,8 +58,6 @@ button {
 /* Modal */
 .overlay {
     display: none;
-}
-.overlay {
     font-size: 2rem;
     position: fixed;
     top: 0;
