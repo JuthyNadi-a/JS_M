@@ -21,13 +21,13 @@ modalScore.textContent = `Oh No!! You got no butterfly!! Try to be faster!`;
 
 /* Start game */
 const startGame = () => {
-  startSound = new sound("assets/gameStart.wav");
+  startSound = new sound("assets/gameStart.mp3");
   startSound.play();
   initialMode = true;
   stopBtn.style.display = 'initial';
   startBtn.style.display = 'none';
   if (rounds >= 3) {
-    startSound = new sound("assets/gameStart.wav");
+    startSound = new sound("assets/gameStart.mp3");
     startSound.stop();
     endSound = new sound ("assets/gameEnd.mp3");
     endSound.play();
@@ -74,7 +74,7 @@ const getRndInt = (min, max) => {
   const scoreCount = (i) => {
     if (i !== activeNum){
       stopGame();
-      startSound = new sound("assets/gameStart.wav");
+      startSound = new sound("assets/gameStart.mp3");
       startSound.stop();
       endSound = new sound ("assets/gameEnd.mp3");
       endSound.play();
@@ -113,7 +113,7 @@ const showModal = () => {
 }
 /* Stop game */ 
 const stopGame = () => {
-  startSound = new sound("assets/gameStart.wav");
+  startSound = new sound("assets/gameStart.mp3");
   startSound.stop();
   endSound = new sound ("assets/gameEnd.mp3");
   endSound.play();
