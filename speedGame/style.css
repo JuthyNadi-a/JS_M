@@ -13,13 +13,13 @@ body {
     padding-top: 10rem;
 }
 h1 {
-    font-size: 3.5rem;
-    margin-top: 150px;
+    font-size: 2.5rem;
+    margin-top: 100px;
     color: rgb(186, 92, 4);
     text-shadow: 2px 3px 1px rgb(12, 12, 12);
 }
 h3{
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 50px;
     color: rgb(186, 92, 4);
     text-shadow: 2px 3px 1px rgb(12, 12, 12);
@@ -27,7 +27,7 @@ h3{
 button {
     margin-top: 50px;
     margin-left: 20px;
-    padding: 30px 60px;
+    padding: 20px 40px;
     font-family: inherit;
     font-size: 2.5rem;
     border-radius: 8px;
@@ -53,8 +53,8 @@ button:hover {
     cursor: pointer;
     margin: 20px;
     border-radius: 50%;
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: 220px;
     background: linear-gradient(#e8c930db, #e87a30db);
     box-shadow: 3px 3px 3px 3px rgb(38, 38, 20);
     display: flex;
