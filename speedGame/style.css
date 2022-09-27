@@ -44,13 +44,11 @@ button {
     border-radius: 50%;
     height: 250px;
     width: 250px;
-    /* background: url(images1.jpeg) no-repeat center center/cover; */
     background: rgba(236, 176, 10, 0.564);
     box-shadow: 3px 3px 3px 3px rgb(38, 38, 20);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* pointer-events: none; */
 }
 .circle.active {
    background: url(images1.jpeg) no-repeat center center/cover;
@@ -78,16 +76,22 @@ button {
     color: #032330;
     padding: 3rem;
 }
+.modal p {
+    padding-top: 3rem;
+}
   
+.show {
+    display: flex;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
 .close {
     position: absolute;
     top: 0;
     right: 20px;
 }
-/* start stop buttons */
-/* .stop {
+/* Button */
+.stop {
     display: none;
-} */
-.start{
-    /* display: ; */
 }
+

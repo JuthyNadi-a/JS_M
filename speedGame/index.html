@@ -29,23 +29,28 @@
         13. if wrong circle clicked then game over
         14. the game should get faster every round
         15. timeout __s for first round. then decrease 10s  or sth in the next rounds consequtively
+        new requirements
+        16. start and stop button conditions
+        17. disable circle before game is on
+        18. adding score and conditional message in modal game over
+        19. sounds (start,end,click) --- w3schools
      -->
      <main>
         <h1>Catch Butterflies</h1>
-        <h3 id="display">Your score is: <span id="score">0</span></h3>
+        <h3 id="display">You caught <span id="score"> 0 </span> butterflies!!</h3>
         <section>
             <div class="circles">
-            <div class="circle c1">1</div>
-            <div class="circle c2">2</div>
-            <div class="circle c3">3</div>
-            <div class="circle c4">4</div>
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
             </div>
             <button class="start">Start</button>
             <button class="stop">Stop</button>
             <div class="overlay">
                 <div class="modal">
-                    <p>Ooops! Game ended.</p>
-                    <p id="modalScore"></p>
+                    <p>Ooops!! Game ended.</p>
+                    <p><span id="modalScore"></span></p>
                     <button class="btn close" id="closeButton">x</button>
                 </div>
             </div>
