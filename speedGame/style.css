@@ -9,27 +9,38 @@ body {
     text-align: center;
     text-shadow: 2px 2px 2px rgb(151, 149, 149);
     min-height: 100vh;
-    background: url('https://thumbs.dreamstime.com/b/autumn-forest-illustration-44169112.jpg') no-repeat center center/cover;
+    background: url('assets/background.jpg') no-repeat center center/cover;
+    padding-top: 10rem;
 }
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-top: 150px;
+    color: rgb(186, 92, 4);
+    text-shadow: 2px 3px 1px rgb(12, 12, 12);
 }
 h3{
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 50px;
+    color: rgb(186, 92, 4);
+    text-shadow: 2px 3px 1px rgb(12, 12, 12);
 }
 button {
     margin-top: 50px;
     margin-left: 20px;
-    padding: 20px 40px;
+    padding: 30px 60px;
     font-family: inherit;
-    font-size: 2.0rem;
+    font-size: 2.5rem;
     border-radius: 8px;
-    background-color: rgb(206, 80, 6);
-    color: azure;
+    background-color: rgb(183, 89, 17);
+    color: rgb(232, 230, 228);
+    text-shadow: 1px 3px 1px rgb(19, 18, 18);
     border: none;
-    box-shadow: 1px 1px 1px gray;
+    box-shadow: 1px 3px 1px rgb(87, 85, 85);
+}
+button:hover {
+    box-shadow: -5px 6px rgb(87, 85, 85),
+    -5px 3px rgb(87, 85, 85);
+    transform: translate(5px, -5px);
 }
 /* Circles */
 .circles {
@@ -44,40 +55,41 @@ button {
     border-radius: 50%;
     height: 250px;
     width: 250px;
-    background: rgba(236, 176, 10, 0.564);
+    background: linear-gradient(#e8c930db, #e87a30db);
     box-shadow: 3px 3px 3px 3px rgb(38, 38, 20);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .circle.active {
-   background: url(images1.jpeg) no-repeat center center/cover;
+   background: url('assets/images1.jpeg') no-repeat center center/cover;
 }
 /* Modal */
 .overlay {
     display: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(128, 126, 126, 0.8);
+    background: rgba(128, 126, 126, 0.935);
     justify-content: center;
     align-items: center;
     color: #333;
   }
 .modal {
     position: relative;
-    background: white;
+    background: linear-gradient(#f6ecbadb, #e5bf66ef);
     min-height: 50vh;
     width: 50vw;
     border-radius: 10px;
-    color: #032330;
+    color: #222120;
+    text-shadow: 1px 3px 1px rgb(175, 49, 11);
     padding: 3rem;
 }
 .modal p {
-    padding-top: 3rem;
+    margin-top: 5rem;
 }
   
 .show {

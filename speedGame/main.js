@@ -15,16 +15,21 @@ let initialMode = false;
 let startSound;
 let endSound;
 
+/* Initial score display */
+score.textContent = `You caught 0 butterfly!!`;
+modalScore.textContent = `Oh No!! You got no butterfly!! Try to be faster!`;
+
+/* Start game */
 const startGame = () => {
-  startSound = new sound("assests/game1.wav");
+  startSound = new sound("assets/gameStart.wav");
   startSound.play();
   initialMode = true;
   stopBtn.style.display = 'initial';
   startBtn.style.display = 'none';
   if (rounds >= 3) {
-    startSound = new sound("assests/game1.wav");
+    startSound = new sound("assets/gameStart.wav");
     startSound.stop();
-    endSound = new sound ("assests/gameEnd.mp3");
+    endSound = new sound ("assets/gameEnd.mp3");
     endSound.play();
     return stopGame();
   }
@@ -51,7 +56,7 @@ const startGame = () => {
       return newCircle(activeNum);
     }
   }
-  /* circle clicked */
+/* circle clicked */
   const activeCircle = (circle,i) => {
     circle.addEventListener("click", function () {
       if (circle.click && initialMode == true) {
@@ -64,48 +69,53 @@ const startGame = () => {
 const getRndInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-  /* Update score with click */
+/* Update score with click */
   let count = 0;
   const scoreCount = (i) => {
     if (i !== activeNum){
       stopGame();
-      startSound = new sound("assests/game1.wav");
+      startSound = new sound("assets/gameStart.wav");
       startSound.stop();
-      endSound = new sound ("assests/gameEnd.mp3");
+      endSound = new sound ("assets/gameEnd.mp3");
       endSound.play();
     } else {
       count++;
       rounds--;
-      score.textContent = count;
-      if (count <=1) {
-        modalScore.textContent = `You caught ${count} butterfly!!Try again!`;
-      } else if (count >= 2 && count <= 5){
-        modalScore.textContent = `You caught ${count} butterflies!!You can be faster! Try again!`;
-      } else if (count >= 6 && count <= 30){
-        modalScore.textContent = `You caught ${count} butterflies!! You did good! Try to be faster!`;
+      if (count == 1) {
+        score.textContent = `You caught ${count} butterfly!!`;
+      } else if (count >= 2) {
+        score.textContent = `You caught ${count} butterflies!!`;
       }
-      else if (count > 30){
-        modalScore.textContent = `You caught ${count} butterflies!! That is super fast! Amazing!!`;
+      if (count <=1) {
+        modalScore.textContent = `Oh No!! You caught ${count} butterfly!! Try to be faster!`;
+      } else if (count >= 2 && count <= 5){
+        modalScore.textContent = `You caught ${count} butterflies!! You can be faster! Try again!`;
+      } else if (count >= 6 && count <= 30){
+        modalScore.textContent = `Nice!! You caught ${count} butterflies!! Try again!`;
+      } else if (count > 30){
+        modalScore.textContent = `Amazing!! You caught ${count} butterflies!! That is super fast!`;
       }
     }
   };
-/* call  function */
+
+/* call function for clicked circle */
 circles.forEach((circle, i) => {
   circle.addEventListener("click", function () {
     if (circle.click && initialMode == true) {
       scoreCount(i)
     }
-      });
   });
+});
+
 /* Show modal */
 const showModal = () => {
   overlay.classList.toggle('show');
 }
 /* Stop game */ 
 const stopGame = () => {
-  /* startSound = new sound("assests/gameStart.wav");
-  startSound.pause(); */
-  endSound = new sound ("assests/gameEnd.mp3");
+  startSound = new sound("assets/gameStart.wav");
+  startSound.stop();
+  endSound = new sound ("assets/gameEnd.mp3");
   endSound.play();
   showModal();
   initialMode = false;
@@ -115,7 +125,8 @@ const stopGame = () => {
 const resetGame = () => {
   window.location.reload();
 };
-/* Game Sound */
+
+/* Game Sound class constructor */
 function sound(src) {
   this.sound = document.createElement("audio");
   this.sound.src = src;
