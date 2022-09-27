@@ -14,15 +14,16 @@ let rounds= 0;
 let initialMode = false;
 let startSound;
 let endSound;
+
 const startGame = () => {
-  startSound = new sound("assests/gameStart.wav");
+  startSound = new sound("assests/game1.wav");
   startSound.play();
   initialMode = true;
   stopBtn.style.display = 'initial';
   startBtn.style.display = 'none';
   if (rounds >= 3) {
-    startSound = new sound("assests/gameStart.wav");
-    startSound.pause();
+    startSound = new sound("assests/game1.wav");
+    startSound.stop();
     endSound = new sound ("assests/gameEnd.mp3");
     endSound.play();
     return stopGame();
@@ -68,8 +69,8 @@ const getRndInt = (min, max) => {
   const scoreCount = (i) => {
     if (i !== activeNum){
       stopGame();
-      startSound = new sound("assests/gameStart.wav");
-      startSound.pause();
+      startSound = new sound("assests/game1.wav");
+      startSound.stop();
       endSound = new sound ("assests/gameEnd.mp3");
       endSound.play();
     } else {
