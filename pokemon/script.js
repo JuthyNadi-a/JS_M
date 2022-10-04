@@ -16,16 +16,31 @@ const btn7 = document.querySelector('#gen7');
 const btn8 = document.querySelector('#gen8');
 const btn9 = document.querySelector('#gen9');
 
-/* for (let i = 1; i <= 18; i++) {
-    const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-    pokeData.push(fetch(url).then(res => res.json()));
-} */
+const search = document.querySelector('#search');
+function initialPokedex() {
+    for (let i = 1; i <= 18; i++) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        pokeData.push(fetch(url).then(res => res.json()));
+    }
+    pokedex();
+    /* window.location.reload(); */
+}
+initialPokedex();
+const searchData = () => {
+    let inputData = search.value;
+    console.log(inputData);
+    /* for (let i = 0; i < pokeData.length; i++) {
+        if(pokemon.name == inputData)
+    } */
+}
+search.addEventListener('click',searchData)
+
 function pokedex() {
     Promise.all(pokeData).then(results => {
         const pokemons = results.map(data => ({
             name: data.name,
             id: data.id,
-            image: data.sprites["front_default"],
+            image: data.sprites.other["official-artwork"].front_default,
             type: data.types.map(type => type.type.name).join(", "),
         }));
         displayCards(pokemons);
@@ -45,6 +60,7 @@ function pokedex() {
         ).join("");
         data.innerHTML = pokeCards;
     }
+    pokeData = [];
 }
 
 btn1.addEventListener('click', function () {

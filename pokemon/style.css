@@ -24,7 +24,7 @@ h1 {
     border-radius: 10px;   
     object-fit: cover;
     width: 300px;
-    height: 200px;
+    height: 100%;
     padding: 2rem;
     background-color: rgb(222, 222, 231);
 }
@@ -67,4 +67,17 @@ button {
     margin: 2rem;
     padding: 1.2rem 2rem;
     border-radius: 8px;
+}
+.search {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+input, label {
+padding: 1.5rem 7rem;
+font-size: 2rem;
+border-radius: 10px;
+}
+label {
+    color: white;
 }
