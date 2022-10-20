@@ -31,7 +31,6 @@ const pizzaOrder = (id) => {
             toppingItems.push(item.value);
         }
     });
-    
         
         if (toppingItems.length == 5) {
             toppingPrice = 0.5;
@@ -49,21 +48,21 @@ const pizzaOrder = (id) => {
             toppingPrice = 0;
         }    
     }
-        /* Pizza delivery options */
-        const pizzaDelivery = () => {
-            const select = document.querySelector('#select');
-            
-            select.addEventListener('change', function handleChange() {
-                //  getting selected TEXT in or outside event handler
-                deliveryOption = select.options[select.selectedIndex].value;
-                if (deliveryOption == "home"){
-                    deliveryPrice = 5;
-                } else {
-                    deliveryPrice = 0;
-                }
-                console.log(deliveryOption,`,delivery price is ${deliveryPrice}€`);
-            });
-        };
+    /* Pizza delivery options */
+    const pizzaDelivery = () => {
+        const select = document.querySelector('#select');
+        
+        select.addEventListener('change', function handleChange() {
+            //  getting selected TEXT in or outside event handler
+            deliveryOption = select.options[select.selectedIndex].value;
+            if (deliveryOption == "home"){
+                deliveryPrice = 5;
+            } else {
+                deliveryPrice = 0;
+            }
+            console.log(deliveryOption,`,delivery price is ${deliveryPrice}€`);
+        });
+    };
         
         pizzaDelivery();
         pizzaOrder();

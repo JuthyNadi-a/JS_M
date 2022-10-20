@@ -63,10 +63,7 @@ searchBtn.addEventListener('click', function() {
     for (let i = 0; i < carArray.length; i++) {
        console.log(i);
        if (searchLicense == carArray[i].license) {
-           console.log(carArray[i].license);
-           console.log(searchLicense);
            return result.innerHTML = `The license plate is <span>${carArray[i].license}</span>.The model of the car is <span>${carArray[i].model}</span> and it belongs to <span>${carArray[i].owner} </span>.`;
-           
         } 
     }
 })

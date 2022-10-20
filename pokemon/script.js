@@ -1,20 +1,20 @@
-let url1 = "https://pokeapi.co/api/v2/pokemon";
-/* let url2= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg" */
+let generations = [
+    {limit:151, offset:1},
+    {limit:251, offset:152},
+    {limit:386, offset:252},
+    {limit:493, offset:387},
+    {limit:649, offset:494},
+    {limit:721, offset:650},
+    {limit:809, offset:722},
+    {limit:905, offset:810}
+]
+let url = `https://pokeapi.co/api/v2/pokemon/`;
 let charName = document.querySelector('#charName');
 let p = document.querySelector('p');
 let pokeData = [];
 let image = document.querySelector('.image');
 const data = document.querySelector('.cards');
-
-const btn1 = document.querySelector('#gen1');
-const btn2 = document.querySelector('#gen2');
-const btn3 = document.querySelector('#gen3');
-const btn4 = document.querySelector('#gen4');
-const btn5 = document.querySelector('#gen5');
-const btn6 = document.querySelector('#gen6');
-const btn7 = document.querySelector('#gen7');
-const btn8 = document.querySelector('#gen8');
-const btn9 = document.querySelector('#gen9');
+const buttons = document.querySelectorAll('button')
 
 const search = document.querySelector('#search');
 function initialPokedex() {
@@ -23,17 +23,20 @@ function initialPokedex() {
         pokeData.push(fetch(url).then(res => res.json()));
     }
     pokedex();
-    /* window.location.reload(); */
 }
 initialPokedex();
 const searchData = () => {
     let inputData = search.value;
     console.log(inputData);
+
     /* for (let i = 0; i < pokeData.length; i++) {
-        if(pokemon.name == inputData)
+        if(pokeData[i].name == inputData){
+            console.log(pokeData[i].name);
+            displayCards(pokemons)
+        }
     } */
 }
-search.addEventListener('click',searchData)
+search.addEventListener('keyup',searchData)
 
 function pokedex() {
     Promise.all(pokeData).then(results => {
@@ -51,9 +54,9 @@ function pokedex() {
         const pokeCards = pokemons.map (
             pokemon => `
                 <div class = "card">
-                <img src="${pokemon.image}" alt="pokemon image">
                 <h2 class="charName">
                 ${pokemon.name}</h2>
+                <img src="${pokemon.image}" alt="pokemon image">
                 <p>${pokemon.type}</p>
                 </div>
             `
@@ -63,67 +66,16 @@ function pokedex() {
     pokeData = [];
 }
 
-btn1.addEventListener('click', function () {
-    for (let i = 1; i <= 151; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+const generationData = (index) => {
+    let start = generations[index]['offset'];
+    let end = generations[index]['limit']
+    for (start; start <= end; start++) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${start}`;
         pokeData.push(fetch(url).then(res => res.json()));
       } 
-pokedex() ;
-})
+pokedex();
+}
 
-btn2.addEventListener('click', function () {
-    for (let i = 152; i <= 251; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
-})
-btn3.addEventListener('click', function () {
-    for (let i = 252; i <= 386; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
-})
-btn4.addEventListener('click', function () {
-    for (let i = 387; i <= 493; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
-})
-btn5.addEventListener('click', function () {
-    for (let i = 494; i <= 649; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
-})
-btn6.addEventListener('click', function () {
-    for (let i = 650; i <= 721; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
-})
-btn7.addEventListener('click', function () {
-    for (let i = 722; i <= 809; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
-})
-btn8.addEventListener('click', function () {
-    for (let i = 810; i <= 905; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
-})
-btn9.addEventListener('click', function () {
-    for (let i = 906; i <= 1154; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex() ;
+buttons.forEach((button,i) => {
+    button.addEventListener('click', () => generationData(i))
 })
