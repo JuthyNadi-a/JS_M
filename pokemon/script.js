@@ -15,40 +15,43 @@ let pokeData = [];
 let image = document.querySelector('.image');
 const data = document.querySelector('.cards');
 const buttons = document.querySelectorAll('button')
-
 const search = document.querySelector('#search');
-function initialPokedex() {
-    for (let i = 1; i <= 18; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+
+const getPokemon = () => {
+  /* fetch for initial 151 pokemons */
+    for (let i = 1; i <= 151; i++) {
+        url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         pokeData.push(fetch(url).then(res => res.json()));
     }
     pokedex();
-}
-initialPokedex();
-const searchData = () => {
-    let inputData = search.value;
-    console.log(inputData);
-
-    /* for (let i = 0; i < pokeData.length; i++) {
-        if(pokeData[i].name == inputData){
-            console.log(pokeData[i].name);
-            displayCards(pokemons)
-        }
-    } */
-}
-search.addEventListener('keyup',searchData)
-
-function pokedex() {
-    Promise.all(pokeData).then(results => {
-        const pokemons = results.map(data => ({
-            name: data.name,
-            id: data.id,
-            image: data.sprites.other["official-artwork"].front_default,
-            type: data.types.map(type => type.type.name).join(", "),
-        }));
-        displayCards(pokemons);
-    });
-    
+   
+    function pokedex() {
+        Promise.all(pokeData).then(results => {
+            const pokemons = results.map(data => ({
+                name: data.name,
+                id: data.id,
+                image: data.sprites.other["official-artwork"].front_default,
+                type: data.types.map(type => type.type.name).join(", "),
+            }));
+            displayCards(pokemons);
+             /*  search poke data */
+            searchPokedex = (e) => {
+            e.preventDefault();
+              let pokemon = pokemons.filter(poke => poke.name.includes(search.value));
+            
+                if (search.value == "") {
+                    displayCards(pokemons);
+                }
+                else {
+                    displayCards(pokemon);    
+                }
+                search.innerHTML == ""
+            }
+        search.addEventListener("keyup", searchPokedex);
+        }); 
+        pokeData = [];
+    }
+    /* display poke cards */
     const displayCards = pokemons => {
         console.log(pokemons);
         const pokeCards = pokemons.map (
@@ -63,19 +66,21 @@ function pokedex() {
         ).join("");
         data.innerHTML = pokeCards;
     }
-    pokeData = [];
-}
+   /* generate poke generations */
+    const generationData = (index) => {
+        let start = generations[index]['offset'];
+        let end = generations[index]['limit']
+        for (start; start <= end; start++) {
+            const url = `https://pokeapi.co/api/v2/pokemon/${start}`;
+            pokeData.push(fetch(url).then(res => res.json()));
+        } 
+        console.log(pokeData);
+    pokedex();
+    }
+    /* Buttons for gennerations */
+    buttons.forEach((button,i) => {
+        button.addEventListener('click', () => generationData(i))
+    })
 
-const generationData = (index) => {
-    let start = generations[index]['offset'];
-    let end = generations[index]['limit']
-    for (start; start <= end; start++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${start}`;
-        pokeData.push(fetch(url).then(res => res.json()));
-      } 
-pokedex();
 }
-
-buttons.forEach((button,i) => {
-    button.addEventListener('click', () => generationData(i))
-})
+getPokemon();
