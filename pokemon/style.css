@@ -1,5 +1,5 @@
 body {
-    background: url(assets/pexels-mel-hager-13463982.jpg) no-repeat center center/cover;
+    background: linear-gradient(to bottom right, rgb(168, 168, 241),rgb(123, 123, 225),rgb(246, 185, 246));
     min-height: 100vh;
     font-family: 'Titan One', cursive;
     overscroll-behavior: none;
@@ -10,6 +10,7 @@ h1 {
     font-size: 4.5rem;
     margin-top: 5rem;
     color: aliceblue;
+    text-shadow: 0 3px 0 #050505;
 }
 .cards {
     margin: 10rem;
@@ -28,7 +29,7 @@ h1 {
     width: 300px;
     height: 100%;
     padding: 2rem;
-    /* background-color: rgb(222, 222, 231); */
+    
     transition: 2px -2px ease-in-out;
 }
 .card {
@@ -52,16 +53,16 @@ h1 {
 
 @keyframes vibrate {
   0% { transform: rotate(0deg); }
-  10% { transform: rotate(-1deg); }
-  20% { transform: rotate(1deg); }
+  10% { transform: rotate(-1.5deg); }
+  20% { transform: rotate(1.5deg); }
   30% { transform: rotate(0deg); }
-  40% { transform: rotate(1deg); }
-  50% { transform: rotate(-1deg); }
+  40% { transform: rotate(1.5deg); }
+  50% { transform: rotate(-1.5deg); }
   60% { transform: rotate(0deg); }
-  70% { transform: rotate(-1deg); }
-  80% { transform: rotate(1deg); }
+  70% { transform: rotate(-1.5deg); }
+  80% { transform: rotate(1.5deg); }
   90% { transform: rotate(0deg); }
-  100% { transform: rotate(-1deg); }
+  100% { transform: rotate(-1.5deg); }
 }
 h2 {
     margin: 0;
@@ -89,6 +90,10 @@ button {
     padding: 1.2rem 2rem;
     border-radius: 8px;
 }
+button:hover {
+    background-color: rgb(79, 98, 79);
+    color: aliceblue;
+}
 .search {
  display: flex;
  align-items: center;
@@ -101,5 +106,6 @@ font-size: 2.5rem;
 border-radius: 10px;
 }
 label {
-    color: white;
+    color: rgb(245, 241, 241);
+    text-shadow: 0 3px 0 #050505;
 }

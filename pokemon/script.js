@@ -24,7 +24,7 @@ const getPokemon = () => {
         pokeData.push(fetch(url).then(res => res.json()));
     }
     pokedex();
-   
+    /* fetch specific data from pokeapi */
     function pokedex() {
         Promise.all(pokeData).then(results => {
             const pokemons = results.map(data => ({
@@ -43,17 +43,16 @@ const getPokemon = () => {
                     displayCards(pokemons);
                 }
                 else {
-                    displayCards(pokemon);    
+                    displayCards(pokemon); 
                 }
-                search.innerHTML == ""
             }
-        search.addEventListener("keyup", searchPokedex);
+            search.addEventListener("keyup", searchPokedex);
         }); 
         pokeData = [];
     }
+    search.innerHTML = "" 
     /* display poke cards */
     const displayCards = pokemons => {
-        console.log(pokemons);
         const pokeCards = pokemons.map (
             pokemon => `
                 <div class = "card">
@@ -74,13 +73,11 @@ const getPokemon = () => {
             const url = `https://pokeapi.co/api/v2/pokemon/${start}`;
             pokeData.push(fetch(url).then(res => res.json()));
         } 
-        console.log(pokeData);
     pokedex();
     }
     /* Buttons for gennerations */
     buttons.forEach((button,i) => {
         button.addEventListener('click', () => generationData(i))
     })
-
 }
 getPokemon();
